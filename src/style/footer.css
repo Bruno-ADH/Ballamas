@@ -1,0 +1,20 @@
+.footer {
+    background-color: white;
+}
+  
+  .divider {
+    border-top: 1px solid var(--neutral50);
+  }
+  
+  ul li {
+    list-style: none; 
+    font-size: .9rem;
+  }
+  
+  a.text-decoration-none:hover {
+    text-decoration: underline; 
+  }
+
+  .divider-row{
+    height: 0;
+  }
