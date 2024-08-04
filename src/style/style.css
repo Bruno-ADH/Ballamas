@@ -54,43 +54,33 @@
   }
   
   .text-neutral-50 {
-    --bs-text-opacity: 1;
     color: (--neutral50),  !important;
   }
   .text-neutral-100 {
-    --bs-text-opacity: 1;
     color: (--neutral100),  !important;
   }
   .text-neutral-200 {
-    --bs-text-opacity: 1;
     color: (--neutral200),  !important;
   }
   .text-neutral-300 {
-    --bs-text-opacity: 1;
     color: (--neutral300),  !important;
   }
   .text-neutral-400 {
-    --bs-text-opacity: 1;
     color: (--neutral400),  !important;
   }
   .text-neutral-500 {
-    --bs-text-opacity: 1;
     color: (--neutral500),  !important;
   }
   .text-neutral-600 {
-    --bs-text-opacity: 1;
     color: (--neutral600),  !important;
   }
   .text-neutral-700 {
-    --bs-text-opacity: 1;
     color: (--neutral700),  !important;
   }
   .text-neutral-800 {
-    --bs-text-opacity: 1;
     color: (--neutral800),  !important;
   }
   .text-neutral-900 {
-    --bs-text-opacity: 1;
     color: (--neutral900),  !important;
   }
   

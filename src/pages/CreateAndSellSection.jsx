@@ -1,29 +1,33 @@
 import React from 'react';
-// import './CreateAndSellSection.css';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import '../style/createAndSellSection.css';
+import useSellesStore from '../data/SellsStore';
 
 const CreateAndSellSection = () => {
-  const steps = [
-    { step: '1', title: 'Create', description: 'Create your NFT easily.' },
-    { step: '2', title: 'List', description: 'List it on our marketplace.' },
-    { step: '3', title: 'Sell', description: 'Sell your NFT and get paid.' },
-  ];
+
+  const steps = useSellesStore.use.sells()
+  console.log("sells gg stap", steps)
 
   return (
-    <section id="create" className="py-5">
-      <div className="container">
-        <h2 className="text-center mb-4">Create and Sell Now</h2>
-        <div className="row">
-          {steps.map((step, index) => (
-            <div key={index} className="col-md-4 text-center">
-              <div className="card p-4 mb-4">
-                <h3>Step {step.step}</h3>
-                <h4>{step.title}</h4>
-                <p>{step.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <section id="create">
+      <Container className="create-and-sell py-5">
+      <h2 className="text-start fw-bold">Create and Sell Now</h2>
+      <Row className="gy-4">
+        {steps.map((step, index) => (
+          <Col key={index} xs={12} md={6} lg={3}>
+            <Card className="step-card text-center h-100 bg-neutral-50 p-1">
+              <Card.Body>
+                <div className="icon-container me-auto mb-3 bg-neutral-600">
+                  <img src={step.icon} alt="Icon" className="img-fluid" />
+                  </div>
+                <Card.Title className="text-neutral-800 fw-bold text-start">{step.title}</Card.Title>
+                <Card.Text className="text-neutral-400 fw-medium text-start detail">{step.details}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
     </section>
   );
 };

@@ -8,6 +8,7 @@ const CollectionsSection = () => {
     // Ajouter plus d'éléments ici
   ];
 
+
   return (
     <section id="collections" className="py-5 bg-light">
       <div className="container">
