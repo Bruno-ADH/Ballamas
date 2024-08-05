@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../style/createAndSellSection.css';
+import { motion } from 'framer-motion';
 import useSellesStore from '../data/SellsStore';
 
 const CreateAndSellSection = () => {
 
   const steps = useSellesStore.use.sells()
-  console.log("sells gg stap", steps)
 
   return (
     <section id="create">

@@ -54,34 +54,34 @@
   }
   
   .text-neutral-50 {
-    color: (--neutral50),  !important;
+    color: var(--neutral50) !important;
   }
   .text-neutral-100 {
-    color: (--neutral100),  !important;
+    color: var(--neutral100) !important;
   }
   .text-neutral-200 {
-    color: (--neutral200),  !important;
+    color: var(--neutral200) !important;
   }
   .text-neutral-300 {
-    color: (--neutral300),  !important;
+    color: var(--neutral300) !important;
   }
   .text-neutral-400 {
-    color: (--neutral400),  !important;
+    color: var(--neutral400) !important;
   }
   .text-neutral-500 {
-    color: (--neutral500),  !important;
+    color: var(--neutral500) !important;
   }
   .text-neutral-600 {
-    color: (--neutral600),  !important;
+    color: var(--neutral600) !important;
   }
   .text-neutral-700 {
-    color: (--neutral700),  !important;
+    color: var(--neutral700) !important;
   }
   .text-neutral-800 {
-    color: (--neutral800),  !important;
+    color: var(--neutral800) !important;
   }
   .text-neutral-900 {
-    color: (--neutral900),  !important;
+    color: var(--neutral900) !important;
   }
   
   .border-neutral-50 {
