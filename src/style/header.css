@@ -1,19 +1,18 @@
-.sign {
-  border-right: 1px solid var(--neutral700);
-}
-
-.divider {
-  height: 2.5rem;
-  width: .12rem;
-  opacity: 1;
-}
-
 .collapsed .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("src/assets/icons/burger-icon.svg");
 }
 
 .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("src/assets/icons/burgerClose-icon.svg");
+}
+
+a[href="#profile"] {
+  padding-block: .25rem;
+  border-right: .15rem solid var(--neutral700);
+}
+
+.connect{
+  padding-block: .6rem;
 }
 
 .connect:hover {

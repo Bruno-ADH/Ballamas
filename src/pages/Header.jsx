@@ -34,9 +34,8 @@ const Header = () => {
         </Nav>
         <Nav className="ml-auto fw-semibold d-flex align-items-center">
           <div className="d-flex align-items-center justify-content-md-evenly">
-            <Nav.Link href="#profile" className="ml-2" onClick={() => state ? toggle() : null}>Sign Up</Nav.Link>
-            <div className="vr ms-3 ms-lg-1 mx-3 align-self-center rounded divider"></div>
-            <Button variant="outline-dark" className="ml-2 btn-neutral-800 rounded-5 connect" onClick={() => state ? toggle() : null}>Connect Wallet</Button>
+            <Nav.Link href="#profile" className="px-4 me-4" onClick={() => state ? toggle() : null}>Sign Up</Nav.Link>
+            <Button variant="outline-dark" className=" btn-neutral-800 rounded-5 connect px-4" onClick={() => state ? toggle() : null}>Connect Wallet</Button>
           </div>
         </Nav>
       </Navbar.Collapse>
