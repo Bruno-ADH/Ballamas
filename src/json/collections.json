@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "category": "gaming",
+        "title": "CyberPunk",
+        "image": "src/assets/gaming/cyber.png",
+        "price": "68"
+    },
+    {
+        "id": 2,
+        "category": "sport",
+        "title": "Durolost  Boll - Upper",
+        "image": "src/assets/sport/space.jpg",
+        "price": "68"
+    },
+    {
+        "id": 3,
+        "category": "art",
+        "title": "Space X Wiper",
+        "image": "src/assets/art/wiper.jpg",
+        "price": "68"
+    },
+    {
+        "id": 4,
+        "category": "celebrities",
+        "title": "Snoop Dogg",
+        "image": "src/assets/celebrities/snoop.png",
+        "price": "68"
+    },
+    {
+        "id": 5,
+        "category": "art",
+        "title": "Space X Wiper",
+        "image": "src/assets/art/wiper.jpg",
+        "price": "68"
+    },
+    {
+        "id": 6,
+        "category": "art",
+        "title": "Space X Wiper",
+        "image": "src/assets/art/wiper.jpg",
+        "price": "68"
+    },
+    {
+        "id": 7,
+        "category": "art",
+        "title": "Space X Wiper",
+        "image": "src/assets/art/wiper.jpg",
+        "price": "68"
+    },
+    {
+        "id": 8,
+        "category": "art",
+        "title": "Space X Wiper",
+        "image": "src/assets/art/wiper.jpg",
+        "price": "68"
+    }
+]
