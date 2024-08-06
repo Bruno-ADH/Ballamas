@@ -31,7 +31,7 @@ const CollectionsSection = () => {
           {categories.map(category => (
             <Col key={category} md="auto" className="mb-2 rounded-5">
               <Button
-                variant={selectedCategory === category ? 'dark' : 'outline-dark btn-neutral-50 border-0 text-neutral-800'}
+                variant={selectedCategory === category ? 'dark' : 'outline-dark btn-neutral-50 border-0 text-neutral-800 hover'}
                 className="fw-semibold rounded-3 selectedBtn"
                 onClick={() => {
                   setSelectedCategory(category);

@@ -1,287 +1,344 @@
-
 :root {
-    --neutral50: #E8E9EA;
-    --neutral100: #BBBABE;
-    --neutral200: #96989E;
-    --neutral300: #666A72;
-    --neutral400: #484D56;
-    --neutral500: #323842;
-    --neutral600: #181D28;
-    --neutral700: #12171F;
-    --neutral800: #0E1218;
-    --neutral900: #0B0D12;
-  }
-  
-  .bg-neutral-50 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral50) !important;
-  }
-  .bg-neutral-100 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral100) !important;
-  }
-  .bg-neutral-200 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral200) !important;
-  }
-  .bg-neutral-300 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral300) !important;
-  }
-  .bg-neutral-400 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral400) !important;
-  }
-  .bg-neutral-500 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral500) !important;
-  }
-  .bg-neutral-600 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral600) !important;
-  }
-  .bg-neutral-700 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral700) !important;
-  }
-  .bg-neutral-800 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral800) !important;
-  }
-  .bg-neutral-900 {
-    --bs-bg-opacity: 1;
-    background-color: var(--neutral900) !important;
-  }
-  
-  .text-neutral-50 {
-    color: var(--neutral50) !important;
-  }
-  .text-neutral-100 {
-    color: var(--neutral100) !important;
-  }
-  .text-neutral-200 {
-    color: var(--neutral200) !important;
-  }
-  .text-neutral-300 {
-    color: var(--neutral300) !important;
-  }
-  .text-neutral-400 {
-    color: var(--neutral400) !important;
-  }
-  .text-neutral-500 {
-    color: var(--neutral500) !important;
-  }
-  .text-neutral-600 {
-    color: var(--neutral600) !important;
-  }
-  .text-neutral-700 {
-    color: var(--neutral700) !important;
-  }
-  .text-neutral-800 {
-    color: var(--neutral800) !important;
-  }
-  .text-neutral-900 {
-    color: var(--neutral900) !important;
-  }
-  
-  .border-neutral-50 {
-    border-color: var(--neutral50);
-  }
-  .border-neutral-100 {
-    border-color: var(--neutral100);
-  }
-  .border-neutral-200 {
-    border-color: var(--neutral200);
-  }
-  .border-neutral-300 {
-    border-color: var(--neutral300);
-  }
-  .border-neutral-400 {
-    border-color: var(--neutral400);
-  }
-  .border-neutral-500 {
-    border-color: var(--neutral500);
-  }
-  .border-neutral-600 {
-    border-color: var(--neutral600);
-  }
-  .border-neutral-700 {
-    border-color: var(--neutral700);
-  }
-  .border-neutral-800 {
-    border-color: var(--neutral800);
-  }
-  .border-neutral-900 {
-    border-color: var(--neutral900);
-  }
-  
-  .btn-neutral-50 {
-    background-color: var(--neutral50);
-    color: #000;
-    :hover {
-      background-color: darken(var(--neutral50), 10%);
-    }
-  }
+  --neutral50: #E8E9EA;
+  --neutral100: #BBBABE;
+  --neutral200: #96989E;
+  --neutral300: #666A72;
+  --neutral400: #484D56;
+  --neutral500: #323842;
+  --neutral600: #181D28;
+  --neutral700: #12171F;
+  --neutral800: #0E1218;
+  --neutral900: #0B0D12;
+}
 
-  .btn-neutral-100 {
-    background-color: var(--neutral100);
-    color: #000;
-    :hover {
-      background-color: darken(var(--neutral100), 10%);
-    }
-  }
+.bg-neutral-50 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral50) !important;
+}
 
-  .btn-neutral-200 {
-    background-color: var(--neutral200);
-    color: #000;
-    :hover {
-      background-color: darken(var(--neutral200), 10%);
-    }
-  }
+.bg-neutral-100 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral100) !important;
+}
 
-  .btn-neutral-300 {
-    background-color: var(--neutral300);
-    color: #000;
-    :hover {
-      background-color: darken(var(--neutral300), 10%);
-    }
-  }
+.bg-neutral-200 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral200) !important;
+}
 
-  .btn-neutral-400 {
-    background-color: var(--neutral400);
-    color: #fff;
-    :hover {
-      background-color: darken(var(--neutral400), 10%);
-    }
-  }
+.bg-neutral-300 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral300) !important;
+}
 
-  .btn-neutral-500 {
-    background-color: var(--neutral500);
-    color: #fff;
-    :hover {
-      background-color: darken(var(--neutral500), 10%);
-    }
-  }
+.bg-neutral-400 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral400) !important;
+}
 
-  .btn-neutral-600 {
-    background-color: var(--neutral600);
-    color: #fff;
-    :hover {
-      background-color: darken(var(--neutral600), 10%);
-    }
-  }
+.bg-neutral-500 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral500) !important;
+}
 
-  .btn-neutral-700 {
-    background-color: var(--neutral700);
-    color: #fff;
-    :hover {
-      background-color: darken(var(--neutral700), 10%);
-    }
-  }
+.bg-neutral-600 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral600) !important;
+}
 
-  .btn-neutral-800 {
-    background-color: var(--neutral800);
-    color: #fff;
-    :hover {
-      background-color: darken(var(--neutral800), 10%);
-    }
-  }
+.bg-neutral-700 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral700) !important;
+}
 
-  .btn-neutral-900 {
-    background-color: var(--neutral900);
-    color: #fff;
-    :hover {
-      background-color: darken(var(--neutral900), 10%);
-    }
-  }
+.bg-neutral-800 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral800) !important;
+}
 
-  .link-neutral-50 {
-    color: var(--neutral50);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-100 {
-    color: var(--neutral100);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-200 {
-    color: var(--neutral200);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-300 {
-    color: var(--neutral300);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-400 {
-    color: var(--neutral400);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-500 {
-    color: var(--neutral500);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-600 {
-    color: var(--neutral600);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-700 {
-    color: var(--neutral700);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-800 {
-    color: var(--neutral800);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  .link-neutral-900 {
-    color: var(--neutral900);
-    text-decoration: none;
-    :hover {
-      text-decoration: underline;
-    }
-  }
-  
-  a {
-    color: var(--neutral-500);
-    text-decoration: none;
-  }
-  a:hover {
-    color: var(--neutral-700);
-  }
+.bg-neutral-900 {
+  --bs-bg-opacity: 1;
+  background-color: var(--neutral900) !important;
+}
 
-  a:active {
-    color: var(--neutral-900);
-  }
+.text-neutral-50 {
+  color: var(--neutral50) !important;
+}
 
-  a[disabled] {
-    color: var(--neutral-300);
-    pointer-events: none;
-  }
+.text-neutral-100 {
+  color: var(--neutral100) !important;
+}
+
+.text-neutral-200 {
+  color: var(--neutral200) !important;
+}
+
+.text-neutral-300 {
+  color: var(--neutral300) !important;
+}
+
+.text-neutral-400 {
+  color: var(--neutral400) !important;
+}
+
+.text-neutral-500 {
+  color: var(--neutral500) !important;
+}
+
+.text-neutral-600 {
+  color: var(--neutral600) !important;
+}
+
+.text-neutral-700 {
+  color: var(--neutral700) !important;
+}
+
+.text-neutral-800 {
+  color: var(--neutral800) !important;
+}
+
+.text-neutral-900 {
+  color: var(--neutral900) !important;
+}
+
+.border-neutral-50 {
+  border-color: var(--neutral50) !important;
+}
+
+.border-neutral-100 {
+  border-color: var(--neutral100) !important;
+}
+
+.border-neutral-200 {
+  border-color: var(--neutral200) !important;
+}
+
+.border-neutral-300 {
+  border-color: var(--neutral300) !important;
+}
+
+.border-neutral-400 {
+  border-color: var(--neutral400) !important;
+}
+
+.border-neutral-500 {
+  border-color: var(--neutral500) !important;
+}
+
+.border-neutral-600 {
+  border-color: var(--neutral600) !important;
+}
+
+.border-neutral-700 {
+  border-color: var(--neutral700) !important;
+}
+
+.border-neutral-800 {
+  border-color: var(--neutral800) !important;
+}
+
+.border-neutral-900 {
+  border-color: var(--neutral900) !important ;
+}
+
+.btn-neutral-50 {
+  background-color: var(--neutral50);
+  color: #000
+}
+
+.btn-neutral-50:hover {
+  background-color: darken(var(--neutral50), 10%);
+}
+
+.btn-neutral-100 {
+  background-color: var(--neutral100);
+  color: #000;
+}
+
+.btn-neutral-100:hover {
+  background-color: darken(var(--neutral100), 10%);
+}
+
+.btn-neutral-200 {
+  background-color: var(--neutral200);
+  color: #000;
+}
+
+.btn-neutral-200:hover {
+  background-color: darken(var(--neutral200), 10%);
+}
+
+.btn-neutral-300 {
+  background-color: var(--neutral300);
+  color: #000;
+}
+
+.btn-neutral-300:hover {
+  background-color: darken(var(--neutral300), 10%);
+}
+
+.btn-neutral-400 {
+  background-color: var(--neutral400);
+  color: #fff;
+}
+
+.btn-neutral-400:hover {
+  background-color: darken(var(--neutral400), 10%);
+}
+
+.btn-neutral-500 {
+  background-color: var(--neutral500);
+  color: #fff;
+}
+
+.btn-neutral-500:hover {
+  background-color: darken(var(--neutral500), 10%);
+}
+
+.btn-neutral-600 {
+  background-color: var(--neutral600);
+  color: #fff;
+}
+
+.btn-neutral-600:hover {
+  background-color: darken(var(--neutral600), 10%);
+}
+
+.btn-neutral-700 {
+  background-color: var(--neutral700);
+  color: #fff;
+}
+
+.btn-neutral-700:hover {
+  background-color: darken(var(--neutral700), 10%);
+}
+
+.btn-neutral-800 {
+  background-color: var(--neutral800);
+  color: #fff;
+}
+
+.btn-neutral-800:hover {
+  background-color: darken(var(--neutral800), 10%);
+}
+
+.btn-neutral-900 {
+  background-color: var(--neutral900);
+  color: #fff;
+}
+
+.btn-neutral-900:hover {
+  background-color: darken(var(--neutral900), 10%);
+}
+
+.link-neutral-50 {
+  color: var(--neutral50);
+  text-decoration: none;
+}
+
+.link-neutral-50:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-100 {
+  color: var(--neutral100);
+  text-decoration: none;
+}
+
+.link-neutral-100:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-200 {
+  color: var(--neutral200);
+  text-decoration: none;
+}
+
+.link-neutral-200:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-300 {
+  color: var(--neutral300);
+  text-decoration: none;
+}
+
+.link-neutral-300:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-400 {
+  color: var(--neutral400);
+  text-decoration: none;
+}
+
+.link-neutral-400:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-500 {
+  color: var(--neutral500);
+  text-decoration: none;
+}
+
+.link-neutral-500:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-600 {
+  color: var(--neutral600);
+  text-decoration: none;
+}
+
+.link-neutral-600:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-700 {
+  color: var(--neutral700);
+  text-decoration: none;
+}
+
+.link-neutral-700:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-800 {
+  color: var(--neutral800);
+  text-decoration: none;
+}
+
+.link-neutral-800:hover {
+  text-decoration: underline;
+}
+
+.link-neutral-900 {
+  color: var(--neutral900);
+  text-decoration: none;
+}
+
+.link-neutral-900:hover {
+  text-decoration: underline;
+}
+
+
+a {
+  color: var(--neutral-500);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--neutral-700);
+}
+
+a:active {
+  color: var(--neutral-900);
+}
+
+a[disabled] {
+  color: var(--neutral-300);
+  pointer-events: none;
+}
 
 /* 
   *{
@@ -313,8 +370,8 @@
     }
   }
    */
- 
-  /* button:focus,
+
+/* button:focus,
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   } */
