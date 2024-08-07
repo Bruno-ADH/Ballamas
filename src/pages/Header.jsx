@@ -1,26 +1,31 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
+import React from 'react';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import '../style/header.css';
 import { useToggle } from '../hooks/useToggle';
 
 const Header = () => {
   const [state, toggle] = useToggle(false)
-  const brandVisible = state ? {
-    visibility: "hidden",
-    pointerEvents: "none"
-  } : {
-    visibility: "visible",
-    pointerEvents: "visible"
+
+  const brand = document.querySelector('.ntf')
+
+  const burgerToggle = () => {
+    toggle()
+    if(brand.className.includes('hidden')){
+      brand.classList.remove('hidden')
+    } else {
+      brand.classList.add('hidden')
+    }
   }
 
   return (
     <Navbar bg="white" expand="lg" sticky='top' expanded={state}>
-      <Navbar.Brand href="#home" className="ms-0 my-3" style={brandVisible}>
+      <Navbar.Brand href="#home" className="ms-0 my-3 ntf" 
+      >
         <img src="src/assets/icons/logo.svg" className="img-fluid" alt="Logo" style={{ width: '36px', height: '36px' }} />
       </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
-        onClick={toggle}
+        onClick={burgerToggle}
         className="btn-neutral-50 burger p-2 rounded-3"
       >
       </Navbar.Toggle>

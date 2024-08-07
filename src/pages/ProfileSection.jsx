@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform} from 'framer-motion';
 const ProfileSection = () => {
   const imgBgRef = useRef(null);
   const sectionRef = useRef(null);
+  const { scrollY } = useScroll();
   // const { scrollYProgress } = useScroll({
   //   target: imgBgRef,
   //   offset: ["start end", "end start"]
@@ -12,20 +13,20 @@ const ProfileSection = () => {
 
   // const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (imgBgRef.current) {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        imgBgRef.current.style.transform = `translateY(${-scrollTop * 0.2}px)`; // Ajuste la vitesse de défilement de l'image
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (imgBgRef.current) {
+  //       const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  //       imgBgRef.current.style.transform = `translateY(${-scrollTop * 0.2}px)`; // Ajuste la vitesse de défilement de l'image
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
 
   return (

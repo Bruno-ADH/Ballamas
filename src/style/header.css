@@ -1,9 +1,20 @@
+.navbar .hidden {
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility .15s ease-in-out;
+}
+
 .collapsed .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("src/assets/icons/burger-icon.svg");
+  background-size: contain;
+  background-position: center;
 }
 
 .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("src/assets/icons/burgerClose-icon.svg");
+  background-size: contain;
+  background-position: center;
+  transition: background-image .10s ease-in-out;
 }
 
 a[href="#profile"] {
@@ -11,7 +22,7 @@ a[href="#profile"] {
   border-right: .15rem solid var(--neutral700);
 }
 
-.connect{
+.connect {
   padding-block: .6rem;
 }
 
@@ -23,6 +34,11 @@ a[href="#profile"] {
 .burger {
   border: none;
   box-shadow: none;
+  transform: scale(1);
+  :hover{
+    transform: scale(1.1);
+    transition: transform .15s ease-in;
+  }
 }
 
 .burger:focus,
@@ -33,6 +49,10 @@ a[href="#profile"] {
 .connect:focus,
 .connect:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.ntf {
+  transition: visibility .15s ease-in-out;
 }
 
 .lg-visible {

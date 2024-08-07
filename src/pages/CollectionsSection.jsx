@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import useCollectionStore from '../data/CollectionStore';
@@ -7,7 +7,6 @@ import '../style/collectionsSection.css';
 const categories = ['All categories', 'Art', 'Celebrities', 'Gaming', 'Sport'];
 
 const CollectionsSection = () => {
-  const id = useRef()
   const [selectedCategory, setSelectedCategory] = useState('All categories');
   const [showAll, setShowAll] = useState(false);
 
@@ -31,7 +30,7 @@ const CollectionsSection = () => {
           {categories.map(category => (
             <Col key={category} md="auto" className="mb-2 rounded-5">
               <Button
-                variant={selectedCategory === category ? 'dark' : 'outline-dark btn-neutral-50 border-0 text-neutral-800 hover'}
+                variant={selectedCategory === category ? 'dark bg-neutral-600' : 'outline-dark btn-neutral-50 border-0 text-neutral-800 hover'}
                 className="fw-semibold rounded-3 selectedBtn"
                 onClick={() => {
                   setSelectedCategory(category);
@@ -60,7 +59,7 @@ const CollectionsSection = () => {
                   <div className='wrapper'
                   >
                     <Card.Img
-                    as={motion.img}
+                      as={motion.img}
                       loading='lazy'
                       variant="top"
                       src={collection.image}
