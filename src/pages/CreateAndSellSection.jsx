@@ -3,13 +3,14 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../style/createAndSellSection.css';
 import { motion } from 'framer-motion';
 import useSellesStore from '../data/SellsStore';
+import FadeInSection from '../components/FadeInSection';
 
 const CreateAndSellSection = () => {
 
   const steps = useSellesStore.use.sells()
 
   return (
-    <section id="top-sales">
+    <FadeInSection id="top-sales">
       <Container className="create-and-sell py-5">
       <h2 className="text-start fw-bold">Create and Sell Now</h2>
       <Row className="gy-4">
@@ -35,7 +36,7 @@ const CreateAndSellSection = () => {
         ))}
       </Row>
     </Container>
-    </section>
+    </FadeInSection>
   );
 };
 

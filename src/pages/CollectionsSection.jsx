@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 import useCollectionStore from '../data/CollectionStore';
 import '../style/collectionsSection.css';
+import FadeInSection from '../components/FadeInSection';
 
 const categories = ['All categories', 'Art', 'Celebrities', 'Gaming', 'Sport'];
 
@@ -19,8 +20,10 @@ const CollectionsSection = () => {
   const visibleCollections = showAll ? filteredCollections : filteredCollections.slice(0, 4);
 
   return (
-    <section id="collections" className="py-5 bg-white">
-      <Container className="my-5">
+    <FadeInSection
+      id="collections"
+      className="my-5">
+      <Container>
         <Row className="justify-content-between align-items-center">
           <Col md="auto">
             <h2 className="fw-bold text-neutral-800">Our Collections</h2>
@@ -58,8 +61,8 @@ const CollectionsSection = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <Card className="collection-card border-neutral-100">
-                    <div 
-                    className='wrapper' 
+                    <div
+                      className='wrapper'
                     >
                       <Card.Img
                         as={motion.img}
@@ -67,7 +70,7 @@ const CollectionsSection = () => {
                         variant="top"
                         src={collection.image}
                         alt={collection.title}
-                        className="img-fluid  progress-bar progress-bar-striped progress-bar-animated bg-neutral-800"
+                        className="img-fluid progress progress-bar progress-bar-striped progress-bar-animated bg-neutral-800"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
                       />
@@ -87,7 +90,7 @@ const CollectionsSection = () => {
           </AnimatePresence>
         </Row>
       </Container>
-    </section>
+    </FadeInSection>
   );
 };
 

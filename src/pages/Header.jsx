@@ -7,10 +7,9 @@ import { useToggle } from '../hooks/useToggle';
 const Header = () => {
   const [state, toggle] = useToggle(false)
 
-  const brand = document.querySelector('.ntf')
-
   const burgerToggle = () => {
     toggle()
+    const brand = document.querySelector('.ntf')
     if (brand.className.includes('hidden')) {
       brand.classList.remove('hidden')
     } else {

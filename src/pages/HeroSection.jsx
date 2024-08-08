@@ -24,6 +24,12 @@ const HeroSection = () => {
   };
 
   const buttonVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' }
+    },
     hover: {
       scale: 1.1,
       transition: { duration: 0.3, ease: 'easeInOut' }
@@ -53,6 +59,8 @@ const HeroSection = () => {
              className="px-0 mt-3 bg-transparent border-0 fw-semibold text-neutral-600"
              variants={buttonVariants}
               whileHover="hover"
+              initial="hidden"
+              animate="visible"
              >
               Discover now <span className="ms-3 border span border-neutral-600">&rarr;</span>
             </motion.button>
