@@ -35,7 +35,8 @@ a[href="#profile"] {
   border: none;
   box-shadow: none;
   transform: scale(1);
-  :hover{
+  transition: background-color .15s ease-in-out;
+  &:hover{
     transform: scale(1.1);
     transition: transform .15s ease-in;
   }
@@ -65,6 +66,11 @@ a[href="#profile"] {
   .lg-visible {
     visibility: visible;
     pointer-events: visible;
+  }
+  .navbar .hidden {
+    visibility: visible;
+    pointer-events: visible;
+    transition: visibility .15s ease-in-out;
   }
 }
 

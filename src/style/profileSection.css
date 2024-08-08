@@ -19,22 +19,21 @@
     transform: translateY(0);
     transition: transform 0.1s ease-out;
     filter: brightness(.4);
-    /* height: 800px; */
   }
-  
+
+  .profile-section:hover .profile-background{
+  }
+
   .profile-content {
     position: absolute;
     display: grid;
     place-items: center;
-    /* top: 50%; */
-    /* translate: 0% -50%; */
     text-align: center;
     color: white;
   }
   
   .profile-content h1 {
     font-weight: 500;
-
   }
   
   .profile-content p {

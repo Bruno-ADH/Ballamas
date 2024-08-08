@@ -9,12 +9,18 @@ const CreateAndSellSection = () => {
   const steps = useSellesStore.use.sells()
 
   return (
-    <section id="create">
+    <section id="top-sales">
       <Container className="create-and-sell py-5">
       <h2 className="text-start fw-bold">Create and Sell Now</h2>
       <Row className="gy-4">
         {steps.map((step, index) => (
           <Col key={index} xs={12} md={6} lg={3}>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -10 }}
+              >
             <Card className="step-card text-center h-100 bg-neutral-50 p-1">
               <Card.Body>
                 <div className="icon-container me-auto mb-3 bg-neutral-600">
@@ -24,6 +30,7 @@ const CreateAndSellSection = () => {
                 <Card.Text className="text-neutral-400 fw-medium text-start detail">{step.details}</Card.Text>
               </Card.Body>
             </Card>
+            </motion.div>
           </Col>
         ))}
       </Row>
