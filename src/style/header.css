@@ -10,6 +10,14 @@
   background-position: center;
 }
 
+.textured-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: .1px black;
+}
+
+
 .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("src/assets/icons/burgerClose-icon.svg");
   background-size: contain;
