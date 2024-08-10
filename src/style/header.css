@@ -25,18 +25,29 @@
   transition: background-image .10s ease-in-out;
 }
 
-a[href="#profile"] {
-  padding-block: .25rem;
-  border-right: .15rem solid var(--neutral700);
+.cart span::after{
+  content: url("src/assets/icons/cart.svg");
+  background-size: cover;
+  object-fit: cover;
 }
 
-.connect {
-  padding-block: .6rem;
+.cart sup {
+  position: relative;
+  top: -1rem;
 }
 
-.connect:hover {
-  color: var(--neutral700);
-  background-color: transparent;
+.search span::after{
+  content: url("src/assets/icons/search.svg");
+  background-size: cover;
+  object-fit: cover;
+}
+
+.account span{
+  content: url("src/assets/icons/account.svg");
+  background-size: cover;
+  object-fit: cover;
+  margin-bottom: -.1rem;
+  margin-right: .1rem;
 }
 
 .burger {
@@ -55,12 +66,8 @@ a[href="#profile"] {
   box-shadow: none;
 }
 
-.connect:focus,
-.connect:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .ntf {
+  position: static;
   transition: visibility .15s ease-in-out;
 }
 
@@ -71,6 +78,20 @@ a[href="#profile"] {
 
 /*PC */
 @media only screen and (min-width: 992px) {
+  .cart sup {
+    position: relative;
+    top: -.5rem;
+  }
+  .cart span::after{
+    content: 'Cart';
+    font-family: 'Archivo', sans-serif;
+    color: var(--black);
+  }  
+  .ntf {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .lg-visible {
     visibility: visible;
     pointer-events: visible;

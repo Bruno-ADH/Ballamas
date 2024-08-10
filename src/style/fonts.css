@@ -16,6 +16,14 @@
     box-sizing: border-box;
 }
 
+.fm-archivo{
+    font-family: 'Archivo', sans-serif;
+}
+
+.fm-chillax{
+    font-family: 'Chillax', sans-serif;
+}
+
 body {
     font-family: 'Chillax', sans-serif;
 }

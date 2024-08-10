@@ -39,10 +39,10 @@ const router = createBrowserRouter([
           //         },
           //     ]
           // },
-          // {
-          //     path: 'contact',
-          //     element: <div className="container my-1">Contact</div>
-          // },
+          {
+              path: 'contact',
+              element: <div className="container my-1">Contact</div>
+          },
           
       ]
   }
@@ -65,7 +65,7 @@ function PageError() {
 function Root() {
   const {state} = useNavigation()
   console.log('state :>> ', state);
-  return <div className='container pt-2'>
+  return <div className='container'>
     <Header />
     <div className="">
             {state === 'loading' && <div className="spinner-border text-primary" role="status">
