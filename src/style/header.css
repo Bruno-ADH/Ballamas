@@ -1,7 +1,6 @@
-.navbar .hidden {
-  visibility: hidden;
-  pointer-events: none;
-  transition: visibility .15s ease-in-out;
+.hidden {
+  border-bottom-width: 0px !important;
+  transition: border-bottom-width .10s ease-in-out;
 }
 
 .collapsed .navbar-toggler-icon {
@@ -9,14 +8,6 @@
   background-size: contain;
   background-position: center;
 }
-
-.textured-text {
-  font-size: 3rem;
-  font-weight: bold;
-  color: transparent;
-  -webkit-text-stroke: .1px black;
-}
-
 
 .navbar-toggler-icon {
   --bs-navbar-toggler-icon-bg: url("src/assets/icons/burgerClose-icon.svg");
@@ -76,6 +67,11 @@
   pointer-events: visible;
 }
 
+.hidden .show {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+}
+
 /*PC */
 @media only screen and (min-width: 992px) {
   .cart sup {
@@ -96,10 +92,12 @@
     visibility: visible;
     pointer-events: visible;
   }
-  .navbar .hidden {
-    visibility: visible;
-    pointer-events: visible;
-    transition: visibility .15s ease-in-out;
+  .hidden {
+    border-bottom-width: 1px !important;
+    transition: border-bottom-width .10s ease-in-out;
+  }
+  .hidden .show {
+    border-top-width: 0px !important;
   }
 }
 

@@ -2,7 +2,7 @@
   --light-gray: #E5E5E5;  
   --gray: #C3C3C3; 
   --dark-gray: #7E7E7E; 
-  --black: #1D1D1D; 
+  --black: #1d1d1d; 
   --green: #2D5C43; 
   --purple: #393158; 
   --ocean: #2A5259; 
@@ -535,7 +535,7 @@
 
 
 a {
-  color: var(--black);
+  color: rgba(29, 29, 29, 0.8) !important;
   text-decoration: none;
   /* font-weight: 700 !important; */
 }

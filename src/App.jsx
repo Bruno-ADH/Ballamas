@@ -9,7 +9,8 @@ import Header from './pages/MainPages/Header';
 // import CollectionsSection from './pages/CollectionsSection';
 // import CreateAndSellSection from './pages/CreateAndSellSection';
 // import ProfileSection from './pages/MainPages.jsx/ProfileSection';
-// import Footer from './pages/Footer';
+import Footer from './pages/MainPages/Footer';
+
 import Home from './pages/Home';
 
 const router = createBrowserRouter([
@@ -65,15 +66,16 @@ function PageError() {
 function Root() {
   const {state} = useNavigation()
   console.log('state :>> ', state);
-  return <div className='container'>
-    <Header />
-    <div className="">
-            {state === 'loading' && <div className="spinner-border text-primary" role="status">
+  return <div className=''>
+    <Header/>
+    <div className="container">
+            {state === 'loading' && <div className="spinner-border text-olive" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>
             }
             <Outlet />
         </div>
+      <Footer/>
   </div>
 }
 

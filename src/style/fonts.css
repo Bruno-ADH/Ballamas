@@ -6,8 +6,47 @@
 }
 
 @font-face {
+    font-family: 'Chillax-Semibold';
+    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Semibold.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chillax-Medium';
+    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Medium.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chillax-Bold';
+    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Bold.otf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Archivo';
     src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo-Semibold';
+    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-SemiBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo-Medium';
+    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo-Bold';
+    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-Bold.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,6 +59,31 @@
     font-family: 'Archivo', sans-serif;
 }
 
+.fm-archivo-Medium{
+    font-family: 'Archivo-Medium', sans-serif;
+}
+
+.fm-archivo-semibold{
+    font-family: 'Archivo-Semibold', sans-serif;
+}
+
+.fm-archivo-bold{
+    font-family: 'Archivo-Bold', sans-serif;
+}
+
+
+.fm-Chillax-Bold{
+    font-family: 'Chillax-Bold', sans-serif;
+}
+
+.fm-Chillax-Medium{
+    font-family: 'Chillax-Medium', sans-serif;
+}
+
+.fm-Chillax-Semibold{
+    font-family: 'Chillax-Semibold', sans-serif;
+}
+
 .fm-chillax{
     font-family: 'Chillax', sans-serif;
 }
@@ -27,3 +91,19 @@
 body {
     font-family: 'Chillax', sans-serif;
 }
+
+.ballamas::before {
+    content: 'BALLAMAS';
+    font-family: 'Chillax-Semibold', sans-serif;
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--black) !important;
+  }
+
+  .ballamas-white::before {
+    content: 'BALLAMAS';
+    font-family: 'Chillax-Semibold', sans-serif;
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff !important;
+  }
