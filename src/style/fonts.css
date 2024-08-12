@@ -98,6 +98,7 @@ body {
     font-size: 2rem;
     color: transparent;
     -webkit-text-stroke: 1px var(--black) !important;
+    letter-spacing: -2px;
   }
 
   .ballamas-white::before {
@@ -106,4 +107,5 @@ body {
     font-size: 2rem;
     color: transparent;
     -webkit-text-stroke: 1px #ffffff !important;
+    letter-spacing: -2px;
   }

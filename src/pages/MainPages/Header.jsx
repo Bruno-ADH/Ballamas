@@ -4,9 +4,16 @@ import '../../style/header.css';
 import { motion } from 'framer-motion';
 import { useToggle } from '../../hooks/useToggle';
 import { Link } from 'react-router-dom';
+import useCartStore from '../../data/useCartStore';
 
 const Header = () => {
   const [state, toggle] = useToggle(false)
+
+  const cartItems = useCartStore.use.cartItems();
+  console.log('cartItems :>> ', cartItems);
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+  console.log('totalItems', totalItems);
+
 
   const burgerToggle = () => {
     toggle()
@@ -80,11 +87,12 @@ const Header = () => {
         <Button
           as={Link}
           to="/contact"
-          className="px-0 px-lg-1 order-2 order-lg-1 bg-transparent fw-normal  border-0 text-black cart"
+          className="px-0 px-lg-1 order-2 order-lg-1 bg-transparent fw-normal  border-0 text-black cart me-2 me-md-0 me-lg-0"
         >
           <span></span>
           <sup
-            className='px-1 rounded-3 text-white text-black fm-archivo-semibold bg-gray'>0</sup>
+            className='px-1 rounded-3 text-white text-black fm-archivo-semibold bg-gray d-lg-none'>{totalItems}</sup>
+            <a className='d-none d-lg-inline'>({totalItems})</a>
         </Button>
         <Button
           as={Link}

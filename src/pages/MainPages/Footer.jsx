@@ -2,16 +2,14 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import '../../style/footer.css';
-import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
-// justify-content-lg-between
+
 const Footer = () => {
   return (
     <footer
-      className="bg-black text-white fm-archivo "
+      className="bg-black text-white fm-archivo"
     >
-
-      <Container>
+      <Container className='px-4 px-md-1'>
         <Row className='justify-content-between'>
           <Col md={8} lg={5} className="px-0">
             <span className="ballamas-white"></span>
@@ -34,7 +32,7 @@ const Footer = () => {
             <Row className="mt-4 mt-lg-0 justify-content-center justify-content-md-start  justify-content-lg-end gap-4">
               <Col xs={3} lg={2} className="mb-3">
                 <h6 className="fm-archivo-Medium">Product</h6>
-                <ul class="list-unstyled">
+                <ul className="list-unstyled">
                   <Link to="/"><li className='text-white' >Jacket</li></Link>
                   <Link to="/"><li className='text-white'>T-Shirt</li></Link>
                   <Link to="/"><li className='text-white'>Shoes</li></Link>
@@ -43,7 +41,7 @@ const Footer = () => {
               </Col>
               <Col xs={3} lg={2} className="mb-3">
                 <h6 className="fm-archivo-Medium">Categories</h6>
-                <ul class="list-unstyled">
+                <ul className="list-unstyled">
                   <Link to="/"><li className='text-white'>Man</li></Link>
                   <Link to="/"><li className='text-white'>Woman</li></Link>
                   <Link to="/"><li className='text-white'>Kids</li></Link>
@@ -53,7 +51,7 @@ const Footer = () => {
               </Col>
               <Col xs={3} lg={3} className="mb-3 px-0 ps-1">
                 <h6 className="fm-archivo-Medium">Our Social Media</h6>
-                <ul class="list-unstyled">
+                <ul className="list-unstyled">
                   <Link to="/"><li className='text-white'>Instagram</li></Link>
                   <Link to="/"><li className='text-white'>Facebook</li></Link>
                   <Link to="/"><li className='text-white'>Youtube</li></Link>

@@ -2,11 +2,16 @@
   --light-gray: #E5E5E5;  
   --gray: #C3C3C3; 
   --dark-gray: #7E7E7E; 
-  --black: #1d1d1d; 
+  --black: #1d1d1d;
+  --filterBlack: invert(0%) sepia(32%) saturate(7455%) hue-rotate(359deg) brightness(90%) contrast(77%);
   --green: #2D5C43; 
+  --filterGreen: invert(29%) sepia(17%) saturate(1163%) hue-rotate(95deg) brightness(94%) contrast(86%);
   --purple: #393158; 
+  --filterPurple: invert(17%) sepia(24%) saturate(1364%) hue-rotate(212deg) brightness(90%) contrast(86%);
   --ocean: #2A5259; 
+  --filterOcean: invert(21%) sepia(6%) saturate(4658%) hue-rotate(141deg) brightness(96%) contrast(72%);
   --olive: #706947; 
+  --filterOlive: invert(32%) sepia(2%) saturate(6621%) hue-rotate(13deg) brightness(121%) contrast(84%);
 
   --neutral50: #E8E9EA;
   --neutral100: #BBBABE;
@@ -18,6 +23,11 @@
   --neutral700: #12171F;
   --neutral800: #0E1218;
   --neutral900: #0B0D12;
+}
+
+*::selection,html::selection, body::selection{
+  color: var(--black);
+  background-color: var(--gray);
 }
 
 .bg-light-gray {

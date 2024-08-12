@@ -16,7 +16,7 @@
   transition: background-image .10s ease-in-out;
 }
 
-.cart span::after{
+.cart span:nth-child(1):after{
   content: url("src/assets/icons/cart.svg");
   background-size: cover;
   object-fit: cover;
@@ -78,7 +78,7 @@
     position: relative;
     top: -.5rem;
   }
-  .cart span::after{
+  .cart span:nth-child(1)::after{
     content: 'Cart';
     font-family: 'Archivo', sans-serif;
     color: var(--black);

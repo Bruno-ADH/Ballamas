@@ -1,58 +1,153 @@
 [
     {
         "id": 1,
-        "category": "gaming",
-        "title": "CyberPunk",
-        "image": "src/assets/gaming/cyber.png",
-        "price": "68"
+      "title": "Leather Watch",
+      "description": "Elegant watch with genuine leather strap.",
+      "image": "src/assets/accessories/watch/watch(1).png",
+      "price": 50,
+      "promo": false,
+      "discount": 0,
+      "category": "accessories",
+      "type": "watch"
     },
     {
         "id": 2,
-        "category": "sport",
-        "title": "Durolost  Boll - Upper",
-        "image": "src/assets/sport/space.jpg",
-        "price": "68"
+      "title": "Joggers",
+      "image": "src/assets/unisex/pants/pants(1).png",
+      "price": 35,
+      "promo": false,
+      "discount": 0,
+      "category": "unisex",
+      "type": "pants"
     },
     {
         "id": 3,
-        "category": "art",
-        "title": "Space X Wiper",
-        "image": "src/assets/art/wiper.jpg",
-        "price": "68"
-    },
+        "title": "Jeans",
+        "image": "src/assets/unisex/pants/pants(3).png",
+        "price": 50,
+        "promo": false,
+        "discount": 0,
+        "category": "unisex",
+        "type": "pants"
+      },
     {
         "id": 4,
-        "category": "celebrities",
-        "title": "Snoop Dogg",
-        "image": "src/assets/celebrities/snoop.png",
-        "price": "68"
+      "title": "Boots",
+      "image": "src/assets/featured/shoes/shoes(1).png",
+      "price": 90,
+      "promo": false,
+      "discount": 0,
+      "category": "featured",
+      "type": "shoes"
     },
     {
         "id": 5,
-        "category": "art",
-        "title": "Space X Wiper",
-        "image": "src/assets/art/wiper.jpg",
-        "price": "68"
-    },
+        "title": "Sneakers",
+        "image": "src/assets/featured/shoes/shoes(3).png",
+        "price": 70,
+        "promo": true,
+        "discount": 20,
+        "category": "featured",
+        "type": "shoes"
+      },
     {
         "id": 6,
-        "category": "art",
-        "title": "Space X Wiper",
-        "image": "src/assets/art/wiper.jpg",
-        "price": "68"
+      "title": "Formal Shoes",
+      "image": "src/assets/featured/shoes/shoes(2).png",
+      "price": 80,
+      "promo": false,
+      "discount": 0,
+      "category": "featured",
+      "type": "shoes"
     },
     {
         "id": 7,
-        "category": "art",
-        "title": "Space X Wiper",
-        "image": "src/assets/art/wiper.jpg",
-        "price": "68"
+      "title": "Luxury Watch",
+      "image": "src/assets/accessories/watch/watch(2).png",
+      "price": 500,
+      "promo": false,
+      "discount": 0,
+      "category": "accessories",
+      "type": "watch"
     },
     {
         "id": 8,
-        "category": "art",
-        "title": "Space X Wiper",
-        "image": "src/assets/art/wiper.jpg",
-        "price": "68"
+        "title": "Cargo Pants",
+        "image": "src/assets/unisex/pants/pants(2).png",
+        "price": 40,
+        "promo": true,
+        "discount": 20,
+        "category": "unisex",
+        "type": "pants"
+      },
+    {
+        "id": 9,
+      "title": "Digital Watch",
+      "image": "src/assets/accessories/watch/watch(5).png",
+      "price": 45,
+      "promo": false,
+      "discount": 0,
+      "category": "accessories",
+      "type": "watch"
+    },
+    {
+        "id": 10,
+      "title": "Sports Watch",
+      "image": "src/assets/accessories/watch/watch(4).png",
+      "price": 70,
+      "promo": false,
+      "discount": 0,
+      "category": "accessories",
+      "type": "watch"
+    },
+    {
+        "id": 11,
+        "title": "Chinos",
+        "image": "src/assets/unisex/pants/pants(4).png",
+        "price": 45,
+        "promo": false,
+        "discount": 0,
+        "category": "unisex",
+        "type": "pants"
+    },
+    {
+        "id": 12,
+      "title": "Smartwatch",
+      "image": "src/assets/accessories/watch/watch(3).png",
+      "price": 150,
+      "promo": false,
+      "discount": 0,
+      "category": "accessories",
+      "type": "watch"
+    },
+    {
+        "id": 13,
+      "title": "Running Shoes",
+      "image": "src/assets/featured/shoes/shoes(4).png",
+      "price": 60,
+      "promo": false,
+      "discount": 0,
+      "category": "featured",
+      "type": "shoes"
+    },
+    {
+        "id": 14,
+      "title": "Casual Shoes",
+      "image": "src/assets/featured/shoes/shoes(5).png",
+      "price": 50,
+      "promo": true,
+      "discount": 15,
+      "category": "featured",
+      "type": "shoes"
+    },
+    {
+        "id": 15,
+      "title": "Dress Pants",
+      "image": "src/assets/unisex/pants/pants(5).png",
+      "price": 60,
+      "promo": false,
+      "discount": 0,
+      "category": "unisex",
+      "type": "pants"
     }
-]
+  ]
