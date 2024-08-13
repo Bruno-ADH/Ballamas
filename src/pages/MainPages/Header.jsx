@@ -86,7 +86,7 @@ const Header = () => {
       <nav className='d-flex order-2 gap-1'>
         <Button
           as={Link}
-          to="/contact"
+          to="/cart"
           className="px-0 px-lg-1 order-2 order-lg-1 bg-transparent fw-normal  border-0 text-black cart me-2 me-md-0 me-lg-0"
         >
           <span></span>

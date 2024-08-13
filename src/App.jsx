@@ -12,18 +12,19 @@ import Meta from './pages/Meta'
 // import ProfileSection from './pages/MainPages.jsx/ProfileSection';
 import Footer from './pages/MainPages/Footer';
 import ProductDetail from './pages/RelatedPages/ProductDetail';
+import CartPage from './pages/RelatedPages/CartPage';
 
 import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root/>,
-    errorElement: <PageError/>,
+    element: <Root />,
+    errorElement: <PageError />,
     children: [
       {
         path: '/',
-        element: <Home/>
+        element: <Home />
       },
       // {
       //     path: 'blog',
@@ -42,13 +43,14 @@ const router = createBrowserRouter([
       //         },
       //     ]
       // },
+      
       {
         path: '/product/:id',
-        element: <ProductDetail/>
+        element: <ProductDetail />
       },
       {
-        path: 'contact',
-        element: <div className="container my-1">Contact</div>
+        path: 'cart',
+        element: <CartPage/>
       },
 
     ]
@@ -73,7 +75,7 @@ function Root() {
   const { state } = useNavigation()
   console.log('state :>> ', state);
   return <div className=''>
-    <Meta/>
+    <Meta />
     <Header />
     <div className="container">
       {state === 'loading' && <div className="spinner-border text-olive border-olive" role="status">

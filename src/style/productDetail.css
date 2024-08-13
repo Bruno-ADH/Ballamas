@@ -1,0 +1,91 @@
+h1 {
+    font-size: 2.625rem !important;
+}
+
+h4 {
+    font-size: 2.25rem;
+}
+
+.div-color-wrapper .color-title {
+    font-size: 1.875rem !important;
+}
+
+.div-color {
+
+    span {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        /* margin-right: 5px; */
+        cursor: pointer;
+    }
+
+}
+
+.size-div-wrapper{
+    span{
+        font-size: 1.875rem !important;
+    }
+}
+
+.size-div-wrapper .size-div button{
+    padding-inline: .875rem;
+    width: 4.6875rem;
+    height: 3.25rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.buy-div {
+    button{
+        padding: .75rem 1.25rem;
+        font-size: .875rem !important;
+    }
+}
+
+.description-div {
+    h3{
+        font-size: 1.875rem !important;
+    }
+
+    p{
+        font-size: 1.125rem !important;
+    }
+}
+
+.related-title {
+    font-size: 1.875rem !important;
+}
+
+.scale-xs{
+    transform: scale(0.6) !important;
+}
+
+.scale-s{
+    transform: scale(0.8) !important;
+}
+
+.scale-m{
+    transform: scale(1) !important;
+}
+
+.scale-l{
+    transform: scale(1.2) !important;
+}
+
+.scale-xl{
+    transform: scale(1.4) !important;
+}
+
+.img-wrapper {
+    /* width: 36.1875rem; */
+    height: 37.5rem;
+    overflow: hidden;
+    background-image: url("src\assets\10a4be064a4d798b22f382964841053a.jpg");
+}
+
+.img-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
