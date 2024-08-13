@@ -1,0 +1,86 @@
+.product-title {
+    font-size: .875rem !important;
+}
+
+.product-size {
+    font-size: .75rem !important;
+}
+
+.product-price {
+    font-size: .875rem !important;
+}
+
+.product-img {
+    height: 4.5rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.add-bouton {
+    background-image: url('/src/assets/icons/add.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+.decrement-bouton {
+    background-image: url('/src/assets/icons/decrement.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+.trash-bouton {
+    background-image: url('/src/assets/icons/trash.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+.trash-clear {
+    background-image: url('/src/assets/icons/trashClear.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+.trash-wrapper {
+    height: 44px;
+    width: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+}
+
+.total-price {
+    font-size: .875rem;
+}
+
+.summary-title {
+    font-size: 1.125rem;
+}
+
+.subtotal, .discount {
+    font-size: .875rem !important;
+}
+
+.order {
+    font-size: .875rem !important;
+}
+
+.order-span {
+    text-wrap: nowrap;
+}
+
+.checkout {
+    padding: .75rem 1.25rem;
+    font-size: .875rem !important;
+}

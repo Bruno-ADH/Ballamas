@@ -82,7 +82,7 @@ const CustomCarousel = ({ collections = null }) => {
                                     </div>
                                     <div className='pb-3 px-3 d-flex justify-content-between gap-1'>
                                         <button type="button" className="btn text-black bg-white fm-archivo-semibold w-50 rounded-pill p-0"
-                                            onClick={() => addToCart(collection)}
+                                            onClick={() => addToCart({...collection, color: 'normal', size: "m"})}
                                         ><span></span>ADD TO CART</button>
                                         <button type="button" className="btn border-white text-white fm-archivo-semibold w-50 rounded-pill hover-white p-0 pd-more"
                                             onClick={() => handleProductClick(collection.id)}

@@ -40,6 +40,18 @@ const useCartStore = createSelectors(create((set) => ({
             item.id === productId ? { ...item, quantity: Math.max(1, quantity) } : item
         )
     })),
+
+    incrementQuantity: (productId) => set((state) => ({
+        cartItems: state.cartItems.map(item =>
+            item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+        )
+    })),
+
+    decrementQuantity: (productId) => set((state) => ({
+        cartItems: state.cartItems.map(item =>
+            item.id === productId ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item
+        )
+    })),
 })));
 
 export default useCartStore;

@@ -12,7 +12,7 @@ const ProductDetail = () => {
   const { id } = useParams();
   const product = useProductById(id);
   const relatedProducts = useRelatedProducts(id)
-  const [selectedColor, setSelectedColor] = useState('green');
+  const [selectedColor, setSelectedColor] = useState('normal');
   const [selectedSize, setSelectedSize] = useState('m');
   const variantsColor = {
     green: 'filterGreen',
@@ -78,7 +78,7 @@ const ProductDetail = () => {
           <div className="my-4 buy-div d-flex">
             <Button variant="dark" className="bg-black text-white me-2 fm-archivo-semibold rounded-pill w-50">BUY NOW</Button>
             <Button className='fm-archivo-semibold rounded-pill border-black text-black hover-dark bg-transparent w-50'
-              onClick={() => addToCart(product)}
+              onClick={() => addToCart({...product, color: selectedColor, size: selectedSize})}
             >ADD TO CART</Button>
           </div>
 
