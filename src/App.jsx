@@ -5,14 +5,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.js';
 import './style/fonts.css';
 import './style/style.css';
 import Header from './pages/MainPages/Header';
-import Meta from './pages/Meta'
-// import HeroSection from './pages/HeroSection';
-// import CollectionsSection from './pages/CollectionsSection';
-// import CreateAndSellSection from './pages/CreateAndSellSection';
-// import ProfileSection from './pages/MainPages.jsx/ProfileSection';
+import Meta from './pages/Meta';
 import Footer from './pages/MainPages/Footer';
 import ProductDetail from './pages/RelatedPages/ProductDetail';
 import CartPage from './pages/RelatedPages/CartPage';
+import CheckoutPage from './pages/RelatedPages/CheckoutPage';
 
 import Home from './pages/Home';
 
@@ -52,6 +49,10 @@ const router = createBrowserRouter([
         path: 'cart',
         element: <CartPage/>
       },
+      {
+        path: 'checkout',
+        element: <CheckoutPage/>
+      }
 
     ]
   }

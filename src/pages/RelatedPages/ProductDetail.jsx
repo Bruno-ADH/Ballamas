@@ -6,6 +6,7 @@ import useProductById from '../../hooks/useProductById';
 import useRelatedProducts from '../../hooks/useRelatedProducts'
 import CustomCarousel from '../../components/CustomCaroussel';
 import useCartStore from '../../data/useCartStore';
+import { useNavigate } from 'react-router-dom';
 
 
 const ProductDetail = () => {
@@ -31,6 +32,12 @@ const ProductDetail = () => {
   };
 
   const addToCart = useCartStore.use.addToCart();
+  const navigate = useNavigate();
+
+  const handleProductClick = () => {
+      navigate(`/cart`);
+  };
+  
 
   return (
     <Container className='mt-5 px-3'>
@@ -76,7 +83,12 @@ const ProductDetail = () => {
           </div>
 
           <div className="my-4 buy-div d-flex">
-            <Button variant="dark" className="bg-black text-white me-2 fm-archivo-semibold rounded-pill w-50">BUY NOW</Button>
+            <Button variant="dark" className="bg-black text-white me-2 fm-archivo-semibold rounded-pill w-50" 
+            onClick={()=> {
+              addToCart({...product, color: selectedColor, size: selectedSize})
+              handleProductClick()
+            }}
+            >BUY NOW</Button>
             <Button className='fm-archivo-semibold rounded-pill border-black text-black hover-dark bg-transparent w-50'
               onClick={() => addToCart({...product, color: selectedColor, size: selectedSize})}
             >ADD TO CART</Button>

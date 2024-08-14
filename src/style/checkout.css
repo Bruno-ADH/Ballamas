@@ -1,0 +1,57 @@
+
+
+.img-tool {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: '10px'
+}
+
+.fs-14 {
+    font-size: .875rem !important;
+}
+
+.fs-12 {
+    font-size: .75rem !important;
+}
+
+.fs-10 {
+    font-size: .675rem !important;
+}
+
+.fs-8 {
+    font-size: .375rem !important;
+}
+
+.input-code {
+    height: 2.75rem;
+    padding-inline: .75rem;
+    box-shadow: none;
+}
+
+.apply {
+    height: 2.75rem;
+    padding-inline: .75rem;
+    width: 76px !important;
+}
+
+input{
+    height: 2.75rem;
+    padding-inline: .75rem;
+    border: .8px solid var(--light-gray);
+    font-family: 'Archivo', sans-serif;
+    font-size: .875rem;
+    color: var(--black);
+    box-shadow: none !important;
+    border-radius: var(--bs-border-radius-pill) !important
+}
+
+::placeholder{
+    font-size: .75rem;
+    color: var(--black);
+}
+
+input:focus, input:focus-visible{
+    border: 1px solid var(--black) !important;
+}
