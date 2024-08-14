@@ -52,31 +52,31 @@ const CheckoutPage = () => {
           <hr />
           <ListGroup variant="flush">
             {cartItems.map((item, index) => (
-                 <li 
-                  key={item.id} 
-                  className="d-flex align-items-center justify-content-between m-0 mb-4"
-                >
-                  <div className='d-flex align-items-center'>
-                    <img 
-                      src={`/${item.image}`} 
-                      alt={item.title} 
-                      className='img-fluid bg-success img-tool'
-                    />
-                    <div className='ms-2'>
-                      <h4 className='fm-archivo-semibold m-0 mb-2 text-black fs-14'>{item.title}</h4>
-                      <p className='fm-archivo-Medium text-dark-gray m-0 fs-12 text-capitalize'>Color: {item.color} - Size: {item.size}</p>
-                    </div>
+              <li
+                key={item.id}
+                className="d-flex align-items-center justify-content-between m-0 mb-4"
+              >
+                <div className='d-flex align-items-center'>
+                  <img
+                    src={`/${item.image}`}
+                    alt={item.title}
+                    className='img-fluid bg-success img-tool'
+                  />
+                  <div className='ms-2'>
+                    <h4 className='fm-archivo-semibold m-0 mb-2 text-black fs-14'>{item.title}</h4>
+                    <p className='fm-archivo-Medium text-dark-gray m-0 fs-12 text-capitalize'>Color: {item.color} - Size: {item.size}</p>
                   </div>
-                  <p className='fm-archivo-semibold fs-14 text-black'>${item.price}</p>
-                </li>
-                
+                </div>
+                <p className='fm-archivo-semibold fs-14 text-black'>${item.price}</p>
+              </li>
+
             ))
             }
           </ListGroup>
-          
+
           <h5 className='m-0 text-black fs-12 fm-archivo-Medium' >Discount Code</h5>
           <InputGroup className="mt-2 mb-1 w-75">
-            <Form.Control placeholder="Add discount code" className='input-code rounded-pill px-3 me-3'/>
+            <Form.Control placeholder="Add discount code" className='input-code rounded-pill px-3 me-3' />
             <Button variant="dark" className='bg-black text-white fm-archivo-semibold fs-14  rounded-pill apply'>Apply</Button>
           </InputGroup>
           <h5 className='fm-archivo-Medium fs-12 text-dark-gray'><span className='text-black'>New customer? Signup</span> to get better offer</h5>
@@ -99,52 +99,60 @@ const CheckoutPage = () => {
             </ListGroup.Item>
           </ListGroup>
 
-
-          <Form.Group className="mt-4 border-0">
+          <Form.Group className='mt-4'>
             <Form.Label className='fm-archivo-semibold fs-14'>Shipping method</Form.Label>
-            <ListGroup>
-              <ListGroup.Item className='border ps-1'>
-                <Form.Check type="radio" name="shippingMethod" label="Free shipping (7-30 business days)" />
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Form.Check type="radio" name="shippingMethod" label="Regular shipping (3-14 business days) - $7.50" />
-              </ListGroup.Item>
-              <ListGroup.Item>
-                <Form.Check type="radio" name="shippingMethod" label="Express shipping (1-3 business days) - $22.50" />
-              </ListGroup.Item>
-            </ListGroup>
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Shipping method</Form.Label>
-            <div>
-              <Form.Check
-                type="radio"
-                label="Free shipping - 7-30 business days"
-                value="free"
-                checked={shippingMethod === 'free'}
-                onChange={handleShippingChange}
-              />
-              <Form.Check
-                type="radio"
-                label="Regular shipping - 3-14 business days - $7.50"
-                value="regular"
-                checked={shippingMethod === 'regular'}
-                onChange={handleShippingChange}
-              />
-              <Form.Check
-                type="radio"
-                label="Express shipping - 1-3 business days - $22.50"
-                value="express"
-                checked={shippingMethod === 'express'}
-                onChange={handleShippingChange}
-              />
+            <div className="shipping-options">
+              <div className={`shipping-option ${shippingMethod === 'free' ? 'checked' : ''}`}>
+                <Form.Check
+                  type="radio"
+                  label=""
+                  value="free"
+                  checked={shippingMethod === 'free'}
+                  onChange={handleShippingChange}
+                />
+                <div className="option-details">
+                  <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Free shipping</p>
+                  <p className="shipping-details fm-archivo-Medium text-dark-gray fs-12">7-30 business days</p>
+                </div>
+                <span className="shipping-cost fm-archivo-Medium text-black fs-14">$0</span>
+              </div>
+
+              <div className={`shipping-option ${shippingMethod === 'regular' ? 'checked' : ''}`}>
+                <Form.Check
+                  type="radio"
+                  label=""
+                  value="regular"
+                  checked={shippingMethod === 'regular'}
+                  onChange={handleShippingChange}
+                />
+                <div className="option-details">
+                  <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Regular shipping</p>
+                  <p className="shipping-details fm-archivo-Medium text-dark-gray fs-12">3-14 business days</p>
+                </div>
+                <span className="shipping-cost fm-archivo-Medium text-black fs-14">$7.50</span>
+              </div>
+
+              <div className={`shipping-option ${shippingMethod === 'express' ? 'checked' : ''}`}>
+                <Form.Check
+                  type="radio"
+                  label=""
+                  value="express"
+                  checked={shippingMethod === 'express'}
+                  onChange={handleShippingChange}
+                />
+                <div className="option-details">
+                  <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Express shipping</p>
+                  <p className="shipping-details fm-archivo-Medium text-dark-gray fs-12">1-3 business days</p>
+                </div>
+                <span className="shipping-cost fm-archivo-Medium text-black fs-14">$22.50</span>
+              </div>
             </div>
           </Form.Group>
         </Col>
 
         <Col md={6}>
           <div className="payment-details">
-            <h4>Payment details</h4>
+            <h4 className='fm-archivo-semibold fs-14'>Payment details</h4>
             <Formik
               initialValues={{
                 firstName: '',
