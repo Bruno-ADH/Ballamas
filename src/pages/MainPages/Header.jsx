@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import '../../style/header.css';
-import { motion } from 'framer-motion';
 import { useToggle } from '../../hooks/useToggle';
 import { Link } from 'react-router-dom';
 import useCartStore from '../../data/useCartStore';
@@ -10,9 +9,7 @@ const Header = () => {
   const [state, toggle] = useToggle(false)
 
   const cartItems = useCartStore.use.cartItems();
-  console.log('cartItems :>> ', cartItems);
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-  console.log('totalItems', totalItems);
 
 
   const burgerToggle = () => {
@@ -43,7 +40,6 @@ const Header = () => {
         <Nav className="fm-archivo w-100 text-center gap-1">
           {['Men', 'Women', 'Kids', 'Collection'].map((link, index) => (
             <Nav.Link as={Link}
-              // to={`${link.toLowerCase().replace(/ /g, '-')}`} 
               to="/"
               className='fw-normal'
               onClick={() => state ? burgerToggle() : null}
@@ -52,31 +48,26 @@ const Header = () => {
             </Nav.Link>
           ))}
           <Nav.Link as={Link}
-            //  to="/shop" 
             to="/"
             className="ms-lg-auto fw-normal fm-archivo"
             onClick={() => state ? burgerToggle() : null}
           >Shop</Nav.Link>
           <Nav.Link as={Link}
-            //  to="/about-us" 
             to="/"
             className=" fw-normal fm-archivo"
             onClick={() => state ? burgerToggle() : null}
           >About Us</Nav.Link>
           <Nav.Link as={Link}
-            //  to="/account" 
             to="/"
             className="fw-normal account fm-archivo me-1"
             onClick={() => state ? burgerToggle() : null}
           ><span></span>Account</Nav.Link>
           <Nav.Link as={Link}
-            //  to="/faq" 
             to="/"
             className="d-lg-none fw-normal mt-3 mt-lg-0 fm-archivo"
             onClick={() => state ? burgerToggle() : null}
           >FAQ</Nav.Link>
           <Nav.Link as={Link}
-            //  to="/contact-us" 
             to="/"
             className="d-lg-none fw-normal mb-4 mb-lg-0 fm-archivo"
             onClick={() => state ? burgerToggle() : null}
@@ -92,7 +83,7 @@ const Header = () => {
           <span></span>
           <sup
             className='px-1 rounded-3 text-white text-black fm-archivo-semibold bg-gray d-lg-none'>{totalItems}</sup>
-            <a className='d-none d-lg-inline'>({totalItems})</a>
+          <a className='d-none d-lg-inline'>({totalItems})</a>
         </Button>
         <Button
           as={Link}

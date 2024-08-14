@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col, Card } from 'react-bootstrap';
 import { motion, useAnimation } from 'framer-motion';
 import '../style/carousel.css';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import useCartStore from '../data/useCartStore';
 
 const CustomCarousel = ({ collections = null }) => {
@@ -11,7 +10,7 @@ const CustomCarousel = ({ collections = null }) => {
     const navigate = useNavigate();
     const addToCart = useCartStore.use.addToCart();
     const handleProductClick = (productId) => {
-        console.log('clique :>> ');
+        console.log('click :>> ');
         navigate(`/product/${productId}`);
     };
 
@@ -82,7 +81,7 @@ const CustomCarousel = ({ collections = null }) => {
                                     </div>
                                     <div className='pb-3 px-3 d-flex justify-content-between gap-1'>
                                         <button type="button" className="btn text-black bg-white fm-archivo-semibold w-50 rounded-pill p-0"
-                                            onClick={() => addToCart({...collection, color: 'normal', size: "m"})}
+                                            onClick={() => addToCart({ ...collection, color: 'normal', size: "m" })}
                                         ><span></span>ADD TO CART</button>
                                         <button type="button" className="btn border-white text-white fm-archivo-semibold w-50 rounded-pill hover-white p-0 pd-more"
                                             onClick={() => handleProductClick(collection.id)}
@@ -102,18 +101,6 @@ const CustomCarousel = ({ collections = null }) => {
                         </Card>
                     </Col>
                 ))}
-                {/* <div>
-                    <img className="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-                    <Link to="/">  <button type="button" class="btn btn-primary">Primary</button>
-
-                    </Link>
-                </div>
-                
-                <img className="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
-                <img className="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" /><img className="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-                <img className="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
-                <img className="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" /> */}
-                {/* Ajoutez d'autres images ici */}
             </motion.div>
         </div>
     );

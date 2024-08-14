@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, defer, Link, NavLink, Outlet, RouterProvider, useNavigate, useNavigation, useRouteError } from 'react-router-dom';
+import { createBrowserRouter, Outlet, RouterProvider, useNavigation, useRouteError } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
 import './style/fonts.css';
@@ -10,7 +10,6 @@ import Footer from './pages/MainPages/Footer';
 import ProductDetail from './pages/RelatedPages/ProductDetail';
 import CartPage from './pages/RelatedPages/CartPage';
 import CheckoutPage from './pages/RelatedPages/CheckoutPage';
-
 import Home from './pages/Home';
 
 const router = createBrowserRouter([
@@ -23,23 +22,6 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />
       },
-      // {
-      //     path: 'blog',
-      //     element: <div className="row">
-      //         <aside className='col-3'>
-      //             <h2>Sidebar</h2>
-      //         </aside>
-      //         <main className='col-9'>
-      //             <Outlet/>
-      //         </main>
-      //     </div>,
-      //     children: [
-      //         {
-      //             path: '',
-      //             element: <div className="container my-1">Contact</div>,
-      //         },
-      //     ]
-      // },
       
       {
         path: '/product/:id',

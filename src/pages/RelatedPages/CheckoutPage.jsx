@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import useCartStore from '../../data/useCartStore';
 import '../../style/checkout.css';
 import PaymentOption from '../../components/PaymentOption';
+import { motion } from 'framer-motion';
 
 const CheckoutPage = () => {
   const cartItems = useCartStore.use.cartItems()
@@ -79,9 +80,14 @@ const CheckoutPage = () => {
           <h5 className='m-0 text-black fs-12 fm-archivo-Medium' >Discount Code</h5>
           <InputGroup className="mt-2 mb-1 w-75">
             <Form.Control placeholder="Add discount code" className='input-code rounded-pill px-3 me-3' />
-            <Button variant="dark" className='bg-black text-white fm-archivo-semibold fs-14  rounded-pill apply'>Apply</Button>
+            <motion.div
+              className='h-auto m-0 w-auto'
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button variant="dark" className='bg-black text-white fm-archivo-semibold fs-14  rounded-pill apply'>Apply</Button>
+            </motion.div>
           </InputGroup>
-          <h5 className='fm-archivo-Medium fs-12 text-dark-gray'><span className='text-black'>New customer? Signup</span> to get better offer</h5>
+          <h5 className='fm-archivo-Medium fs-12 text-dark-gray'><span className='text-black'>New customer? <a href="" className='text-black text-decoration-underline'>Signup</a></span> to get better offer</h5>
 
           <ListGroup className="mt-3">
             <ListGroup.Item className='px-0 border-0'>
@@ -191,6 +197,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="firstName"
+                          placeholder='Enter your first name'
                           value={values.firstName}
                           onChange={handleChange}
                           isInvalid={touched.firstName && !!errors.firstName}
@@ -206,6 +213,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="lastName"
+                          placeholder='Enter your last name'
                           value={values.lastName}
                           onChange={handleChange}
                           isInvalid={touched.lastName && !!errors.lastName}
@@ -224,6 +232,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="email"
                           name="email"
+                          placeholder='Enter your email address'
                           value={values.email}
                           onChange={handleChange}
                           isInvalid={touched.email && !!errors.email}
@@ -239,6 +248,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="phone"
+                          placeholder='Enter your phone number'
                           value={values.phone}
                           onChange={handleChange}
                           isInvalid={touched.phone && !!errors.phone}
@@ -257,6 +267,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="address"
+                          placeholder='Enter your address'
                           value={values.address}
                           onChange={handleChange}
                           isInvalid={touched.address && !!errors.address}
@@ -272,6 +283,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="city"
+                          placeholder='City'
                           value={values.city}
                           onChange={handleChange}
                           isInvalid={touched.city && !!errors.city}
@@ -290,6 +302,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="region"
+                          placeholder='Select region'
                           value={values.region}
                           onChange={handleChange}
                           isInvalid={touched.region && !!errors.region}
@@ -305,6 +318,7 @@ const CheckoutPage = () => {
                         <Form.Control
                           type="text"
                           name="postalCode"
+                          placeholder='Enter your postal code'
                           value={values.postalCode}
                           onChange={handleChange}
                           isInvalid={touched.postalCode && !!errors.postalCode}
@@ -401,13 +415,18 @@ const CheckoutPage = () => {
                   </Form.Group>
                   <Row className="mt-4">
                     <Col className="d-flex justify-content-center">
-                      <Button
-                        variant="dark"
-                        type="submit"
-                        className="pay-button w-75 rounded-pill text-white"
+                      <motion.div
+                        className='h-auto m-0 w-100 text-center'
+                        whileTap={{ scale: 0.95 }}
                       >
-                        Pay ${calculateTotal()} &rarr;
-                      </Button>
+                        <Button
+                          variant="dark"
+                          type="submit"
+                          className="pay-button w-75 rounded-pill text-white"
+                        >
+                          Pay ${calculateTotal()} &rarr;
+                        </Button>
+                      </motion.div>
                     </Col>
                   </Row>
                 </Form>)}

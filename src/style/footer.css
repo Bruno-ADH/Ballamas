@@ -16,9 +16,19 @@ button{
   font-size: .875rem !important;
 }
 
+h6{
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  margin-bottom: 1rem;
+}
+
 li{
-  font-size: .875rem !important;
   cursor: pointer;
+}
+
+.footer-link{
+  font-size: .875rem;
+  line-height: 1.75;
 }
 
 input:focus, input:focus-visible{

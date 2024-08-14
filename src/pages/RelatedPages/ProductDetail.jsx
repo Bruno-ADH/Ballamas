@@ -7,6 +7,7 @@ import useRelatedProducts from '../../hooks/useRelatedProducts'
 import CustomCarousel from '../../components/CustomCaroussel';
 import useCartStore from '../../data/useCartStore';
 import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 const ProductDetail = () => {
@@ -35,22 +36,34 @@ const ProductDetail = () => {
   const navigate = useNavigate();
 
   const handleProductClick = () => {
-      navigate(`/cart`);
+    navigate(`/cart`);
   };
-  
+
 
   return (
     <Container className='mt-5 px-3'>
       <Row className="my-5 pt-4">
         <Col md={6} className=''>
-          <div className='bg-light-gray rounded-5 img-wrapper'>
-            <img
-              loading='lazy'
-              src={`/${product.image}`}
-              alt={product.title}
-              className={`img-fluid w-100 h-100 ${variantsColor[selectedColor]} ${variantsSize[selectedSize]}`}
-            />
-          </div>
+          <AnimatePresence>
+            <div className='bg-light-gray rounded-5 img-wrapper'>
+
+              <motion.div
+                key={selectedColor + selectedSize}
+                initial={{ opacity: 0, x: '100%' }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: '-100%' }}
+                transition={{ type: "spring" }}
+              >
+                <img
+                  loading='lazy'
+                  src={`/${product.image}`}
+                  alt={product.title}
+                  className={`img-fluid w-100 h-100 ${variantsColor[selectedColor]} ${variantsSize[selectedSize]}`}
+                />
+              </motion.div>
+
+            </div>
+          </AnimatePresence>
         </Col>
         <Col md={6}>
           <h1 className="fm-Chillax-Semibold">{product?.title}</h1>
@@ -62,6 +75,7 @@ const ProductDetail = () => {
                 <span
                   key={color}
                   onClick={() => setSelectedColor(color)}
+                  aria-label={`Select ${color} color`}
                   className={`border bg-${color} ${selectedColor === color ? 'border-gray border-2' : 'border-transparent'}`}
                 />
               ))}
@@ -76,25 +90,42 @@ const ProductDetail = () => {
                   key={size}
                   onClick={() => setSelectedSize(size)}
                   variant="outline-dark"
+                  aria-label={`Select size ${size}`}
                   className={`me-2 fs-5 rounded-pill text-uppercase ${selectedSize === size ? 'btn-black hover-dark' : 'bg-transparent border-black text-black hover-dark'}`}
                 >{size}</Button>
               ))}
             </div>
           </div>
 
-          <div className="my-4 buy-div d-flex">
-            <Button variant="dark" className="bg-black text-white me-2 fm-archivo-semibold rounded-pill w-50" 
-            onClick={()=> {
-              addToCart({...product, color: selectedColor, size: selectedSize})
-              handleProductClick()
-            }}
-            >BUY NOW</Button>
-            <Button className='fm-archivo-semibold rounded-pill border-black text-black hover-dark bg-transparent w-50'
-              onClick={() => addToCart({...product, color: selectedColor, size: selectedSize})}
-            >ADD TO CART</Button>
+          <div className="my-4 buy-div d-flex gap-2">
+            <motion.div
+              className='h-auto m-0 p-0 w-50'
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button variant="dark" className="bg-black text-white me-2 fm-archivo-semibold rounded-pill w-100"
+                onClick={() => {
+                  addToCart({ ...product, color: selectedColor, size: selectedSize })
+                  handleProductClick()
+                }}
+              >BUY NOW</Button>
+            </motion.div>
+            <motion.div
+              className='h-auto m-0 w-100'
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button className='fm-archivo-semibold rounded-pill border-black text-black hover-dark bg-transparent w-50'
+                onClick={() => addToCart({ ...product, color: selectedColor, size: selectedSize })}
+              >ADD TO CART</Button></motion.div>
           </div>
 
-          <div className="mt-5 description-div">
+          <motion.div
+            className="mt-5 description-div"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+
+          >
             <h3 className='fm-Chillax-Semibold text-black mb-2'>Description</h3>
             <p className='fm-archivo text-dark-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -102,7 +133,7 @@ const ProductDetail = () => {
               Class aptent taciti sociosqu ad litora torquent per conubia nostra,
               per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
             </p>
-          </div>
+          </motion.div>
         </Col>
       </Row>
 

@@ -22,9 +22,11 @@
 
     .card-body {
       cursor: pointer;
+
       .card-title {
         text-decoration: none;
         transition: text-decoration .10s ease-in-out;
+
         &:hover {
           text-decoration: underline;
           text-decoration-color: var(--black);
@@ -114,53 +116,3 @@
       object-fit: cover;
       border-radius: inherit;
     }
-
-    .collection-card button {}
-
-    /* .product-card {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.product-card img {
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover img {
-    transform: scale(1.1);
-}
-
-.product-card .discount-label {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: red;
-    color: white;
-    padding: 5px;
-    font-size: 0.8em;
-    z-index: 2;
-}
-
-.product-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 50, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-}
-
-.product-card:hover .product-overlay {
-    opacity: 1;
-}
-
-.product-grid p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-} */

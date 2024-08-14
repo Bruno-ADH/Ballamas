@@ -1,153 +1,149 @@
-
-
 .img-tool {
-    width: 72px;
-    height: 72px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: '10px'
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: '10px'
 }
 
 .fs-14 {
-    font-size: .875rem !important;
+  font-size: .875rem !important;
 }
 
 .fs-12 {
-    font-size: .75rem !important;
+  font-size: .75rem !important;
 }
 
 .fs-10 {
-    font-size: .675rem !important;
+  font-size: .675rem !important;
 }
 
 .fs-8 {
-    font-size: .375rem !important;
+  font-size: .375rem !important;
 }
 
 .input-code {
-    height: 2.75rem;
-    padding-inline: .75rem;
-    box-shadow: none;
+  height: 2.75rem;
+  padding-inline: .75rem;
+  box-shadow: none;
 }
 
 .apply {
-    height: 2.75rem;
-    padding-inline: .75rem;
-    width: 76px !important;
+  height: 2.75rem;
+  padding-inline: .75rem;
+  width: 76px !important;
 }
 
-input[type="text"], input[type="email"]{
-    height: 2.75rem;
-    padding-inline: .75rem;
-    border: .8px solid var(--light-gray);
-    font-family: 'Archivo', sans-serif;
-    font-size: .875rem;
-    color: var(--black);
-    box-shadow: none !important;
-    border-radius: var(--bs-border-radius-pill);
+input[type="text"], input[type="email"] {
+  height: 2.75rem;
+  padding-inline: .75rem;
+  border: .8px solid var(--light-gray);
+  font-family: 'Archivo', sans-serif;
+  font-size: .875rem;
+  color: var(--black);
+  box-shadow: none !important;
+  border-radius: var(--bs-border-radius-pill);
 }
 
-input::placeholder{
-    font-size: .75rem;
-    color: var(--black) !important;
-    font-family: 'fm-archivo', sans-serif;
+input::placeholder {
+  font-size: .75rem;
+  color: var(--black) !important;
+  font-family: 'fm-archivo', sans-serif;
 }
 
-input:focus, input:focus-visible{
-    border: 1px solid var(--black) !important;
+input:focus, input:focus-visible {
+  border: 1px solid var(--black) !important;
 }
 
 .form-check-input:checked[type=radio] {
-    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%231d1d1d'/%3e%3c/svg%3e");
-    background-color: transparent !important;
-    border-color: var(--black) !important;
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%231d1d1d'/%3e%3c/svg%3e");
+  background-color: transparent !important;
+  border-color: var(--black) !important;
 }
 
 .form-check-input:checked[type=checkbox] {
-    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%231d1d1d' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
-    background-color: transparent !important;
-    border-color: var(--black) !important;
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%231d1d1d' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  background-color: transparent !important;
+  border-color: var(--black) !important;
 }
 
 .shipping-options {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .shipping-option {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 12px;
-    border: 1px solid var(--light-gray);
-    border-radius: 12px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-  }
-  
-  .shipping-option.checked {
-    border-color: var(--black); /* Change la couleur du bord si la méthode est sélectionnée */
-  }
-  
-  .option-details {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .shipping-option-title {
-    margin: 0;
-  }
-  
-  .shipping-details {
-    margin: 0;
-  }
-  
-  .shipping-cost {
-  }
-
-  .fa-university{
-    content: url('/src/assets/icons/bank.svg');
-    padding: 0px !important;
-  }
-  
-  .credit-card {
-    content: url('/src/assets/icons/creditCard.svg');
-    padding: 0px !important;
-  }
-
-  .fa-lock::before {
-    content: url('/src/assets/icons/locked.svg');
-    padding: 0px !important;
-    position: relative;
-    top: .2rem;
-  }
-
-  .card-num:focus, .card-num:focus-visible {
-    border-right-width: 0px !important ;
-    transition: none !important;
-    ~.card-text{
-        border-color: var(--black) !important;
-        transition: none !important;
-    }
-  }
-
-  .card-num.is-invalid, .was-validated .card-num:invalid {
-    ~.card-text{
-        border-color: var(--bs-form-invalid-border-color) !important;
-        transition: none !important;
-    }
+  display: flex;
+  flex-direction: column;
 }
 
-  .pay-button {
-    padding: .75rem 1.25rem;
-    background-color: var(--black);
-  }
+.shipping-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
 
-  .pay-button:focus, .pay-button:focus-visible {
-    cursor: wait;
-  }
+.shipping-option.checked {
+  border-color: var(--black);
+}
 
-  .inValid {
-    border-color: #dc3545;
+.option-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.shipping-option-title {
+  margin: 0;
+}
+
+.shipping-details {
+  margin: 0;
+}
+
+.fa-university {
+  content: url('/src/assets/icons/bank.svg');
+  padding: 0px !important;
+}
+
+.credit-card {
+  content: url('/src/assets/icons/creditCard.svg');
+  padding: 0px !important;
+}
+
+.fa-lock::before {
+  content: url('/src/assets/icons/locked.svg');
+  padding: 0px !important;
+  position: relative;
+  top: .2rem;
+}
+
+.card-num:focus, .card-num:focus-visible {
+  border-right-width: 0px !important;
+  transition: none !important;
+
+  ~.card-text {
+    border-color: var(--black) !important;
+    transition: none !important;
   }
+}
+
+.card-num.is-invalid, .was-validated .card-num:invalid {
+  ~.card-text {
+    border-color: var(--bs-form-invalid-border-color) !important;
+    transition: none !important;
+  }
+}
+
+.pay-button {
+  padding: .75rem 1.25rem;
+  background-color: var(--black);
+}
+
+.pay-button:focus, .pay-button:focus-visible {
+  cursor: wait;
+}
+
+.inValid {
+  border-color: #dc3545;
+}

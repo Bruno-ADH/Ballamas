@@ -20,12 +20,19 @@ const Footer = () => {
                 placeholder="Your email"
                 className="bg-transparent text-white rounded-5 border-white"
               />
-              <Button
-                variant="light"
-                className='rounded-5 px-4'
+              <motion.div
+                className='h-auto m-0 '
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Subscribe
-              </Button>
+
+                <Button
+                  variant="light"
+                  className='rounded-5 px-4 h-100'
+                >
+                  Subscribe
+                </Button>
+              </motion.div>
             </Form>
           </Col>
           <Col md={12} lg={6} className="px-0">
@@ -33,29 +40,29 @@ const Footer = () => {
               <Col xs={3} lg={2} className="mb-3">
                 <h6 className="fm-archivo-Medium">Product</h6>
                 <ul className="list-unstyled">
-                  <Link to="/"><li className='text-white' >Jacket</li></Link>
-                  <Link to="/"><li className='text-white'>T-Shirt</li></Link>
-                  <Link to="/"><li className='text-white'>Shoes</li></Link>
-                  <Link to="/"><li className='text-white'>Sunglasses</li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link' >Jacket</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>T-Shirt</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Shoes</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Sunglasses</motion.li></Link>
                 </ul>
               </Col>
               <Col xs={3} lg={2} className="mb-3">
                 <h6 className="fm-archivo-Medium">Categories</h6>
                 <ul className="list-unstyled">
-                  <Link to="/"><li className='text-white'>Man</li></Link>
-                  <Link to="/"><li className='text-white'>Woman</li></Link>
-                  <Link to="/"><li className='text-white'>Kids</li></Link>
-                  <Link to="/"><li className='text-white'>Gift</li></Link>
-                  <Link to="/"><li className='text-white'>New arrival</li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Man</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Woman</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Kids</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Gift</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>New arrival</motion.li></Link>
                 </ul>
               </Col>
               <Col xs={3} lg={3} className="mb-3 px-0 ps-1">
                 <h6 className="fm-archivo-Medium">Our Social Media</h6>
                 <ul className="list-unstyled">
-                  <Link to="/"><li className='text-white'>Instagram</li></Link>
-                  <Link to="/"><li className='text-white'>Facebook</li></Link>
-                  <Link to="/"><li className='text-white'>Youtube</li></Link>
-                  <Link to="/"><li className='text-white'>X</li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Instagram</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Facebook</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Youtube</motion.li></Link>
+                  <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>X</motion.li></Link>
                 </ul>
               </Col>
             </Row>
