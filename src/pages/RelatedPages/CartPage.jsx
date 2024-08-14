@@ -73,7 +73,7 @@ const CartPage = () => {
           <div className="p-3 border border-light-gray rounded-4 p-3 px-4">
             <h4 className='fm-archivo-semibold mb-0 mb-4 summary-title'>Order summary</h4>
             <p className='text-dark-gray d-flex mb-0 fm-archivo-Medium subtotal'>Subtotal: <span className='w-100 text-end'>${calculateTotal()}</span></p>
-            <p className='border-0 pb-2 border-bottom border-light-gray text-dark-gray d-flex fm-archivo-Medium discount'>Discount: <span className='w-100 text-end'>{totalDiscount}%</span></p>
+            <p className='border-0 pb-2 border-bottom border-light-gray text-dark-gray d-flex fm-archivo-Medium discount'>Discount: <span className='w-100 text-end'>${totalDiscount}</span></p>
             <h5 className='fm-archivo-semibold text-black order d-flex'><span className='order-span'>Order total:</span> <span className='w-100 text-end'>${calculateTotal()}</span></h5>
             <Button as={Link} to="/checkout" variant="dark" className="w-100 mt-2 checkout bg-black rounded-pill text-white hover-dark">Checkout now</Button>
           </div>

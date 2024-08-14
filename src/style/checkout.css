@@ -44,12 +44,13 @@ input[type="text"], input[type="email"]{
     font-size: .875rem;
     color: var(--black);
     box-shadow: none !important;
-    border-radius: var(--bs-border-radius-pill) !important
+    border-radius: var(--bs-border-radius-pill);
 }
 
-::placeholder{
+input::placeholder{
     font-size: .75rem;
-    color: var(--black);
+    color: var(--black) !important;
+    font-family: 'fm-archivo', sans-serif;
 }
 
 input:focus, input:focus-visible{
@@ -58,6 +59,12 @@ input:focus, input:focus-visible{
 
 .form-check-input:checked[type=radio] {
     --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%231d1d1d'/%3e%3c/svg%3e");
+    background-color: transparent !important;
+    border-color: var(--black) !important;
+}
+
+.form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%231d1d1d' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
     background-color: transparent !important;
     border-color: var(--black) !important;
 }
@@ -98,4 +105,49 @@ input:focus, input:focus-visible{
   
   .shipping-cost {
   }
+
+  .fa-university{
+    content: url('/src/assets/icons/bank.svg');
+    padding: 0px !important;
+  }
   
+  .credit-card {
+    content: url('/src/assets/icons/creditCard.svg');
+    padding: 0px !important;
+  }
+
+  .fa-lock::before {
+    content: url('/src/assets/icons/locked.svg');
+    padding: 0px !important;
+    position: relative;
+    top: .2rem;
+  }
+
+  .card-num:focus, .card-num:focus-visible {
+    border-right-width: 0px !important ;
+    transition: none !important;
+    ~.card-text{
+        border-color: var(--black) !important;
+        transition: none !important;
+    }
+  }
+
+  .card-num.is-invalid, .was-validated .card-num:invalid {
+    ~.card-text{
+        border-color: var(--bs-form-invalid-border-color) !important;
+        transition: none !important;
+    }
+}
+
+  .pay-button {
+    padding: .75rem 1.25rem;
+    background-color: var(--black);
+  }
+
+  .pay-button:focus, .pay-button:focus-visible {
+    cursor: wait;
+  }
+
+  .inValid {
+    border-color: #dc3545;
+  }

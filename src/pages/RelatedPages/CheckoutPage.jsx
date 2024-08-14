@@ -4,10 +4,12 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import useCartStore from '../../data/useCartStore';
 import '../../style/checkout.css';
+import PaymentOption from '../../components/PaymentOption';
 
 const CheckoutPage = () => {
   const cartItems = useCartStore.use.cartItems()
   const [shippingMethod, setShippingMethod] = useState('free');
+  const [paymentMethod, setPaymentMethod] = useState(null);
 
   const handleShippingChange = (event) => {
     setShippingMethod(event.target.value);
@@ -60,7 +62,7 @@ const CheckoutPage = () => {
                   <img
                     src={`/${item.image}`}
                     alt={item.title}
-                    className='img-fluid bg-success img-tool'
+                    className='img-fluid bg-light-gray img-tool'
                   />
                   <div className='ms-2'>
                     <h4 className='fm-archivo-semibold m-0 mb-2 text-black fs-14'>{item.title}</h4>
@@ -89,7 +91,7 @@ const CheckoutPage = () => {
               </Row>
               <Row className='fm-archivo-Medium text-dark-gray fs-14  mb-2'>
                 <Col>Discount</Col>
-                <Col className="text-end">{totalDiscount}%</Col>
+                <Col className="text-end">${totalDiscount}</Col>
               </Row>
               <hr />
               <Row className='fm-archivo-semibold text-black fs-14'>
@@ -152,7 +154,9 @@ const CheckoutPage = () => {
 
         <Col md={6}>
           <div className="payment-details">
-            <h4 className='fm-archivo-semibold fs-14'>Payment details</h4>
+            <h4 className='fm-archivo-semibold fs-14 text-black'>Payment details</h4>
+            <p className='fm-archivo-Medium fs-12 text-dark-gray'>Complete your purchase by providing your payment details.</p>
+            <h4 className='fm-archivo-semibold fs-14 text-black mb-3'>Shipping address</h4>
             <Formik
               initialValues={{
                 firstName: '',
@@ -170,7 +174,6 @@ const CheckoutPage = () => {
               validationSchema={validationSchema}
               onSubmit={(values) => {
                 console.log('Form values:', values);
-                // Logique pour soumettre la commande
               }}
             >
               {({
@@ -181,159 +184,232 @@ const CheckoutPage = () => {
                 touched,
               }) => (
                 <Form onSubmit={handleSubmit}>
-                  <Form.Group controlId="firstName">
-                    <Form.Label>First name</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="firstName"
-                      value={values.firstName}
-                      onChange={handleChange}
-                      isInvalid={touched.firstName && !!errors.firstName}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.firstName}
-                    </Form.Control.Feedback>
+                  <Row>
+                    <Col md={6}>
+                      <Form.Group controlId="firstName">
+                        <Form.Label className='fm-archivo-Medium fs-12'>First name</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="firstName"
+                          value={values.firstName}
+                          onChange={handleChange}
+                          isInvalid={touched.firstName && !!errors.firstName}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.firstName}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                    <Col md={6}>
+                      <Form.Group controlId="lastName">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>Last name</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="lastName"
+                          value={values.lastName}
+                          onChange={handleChange}
+                          isInvalid={touched.lastName && !!errors.lastName}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.lastName}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col md={6}>
+                      <Form.Group controlId="email">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>Email address</Form.Label>
+                        <Form.Control
+                          type="email"
+                          name="email"
+                          value={values.email}
+                          onChange={handleChange}
+                          isInvalid={touched.email && !!errors.email}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.email}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                    <Col md={6}>
+                      <Form.Group controlId="phone">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>Phone number</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="phone"
+                          value={values.phone}
+                          onChange={handleChange}
+                          isInvalid={touched.phone && !!errors.phone}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.phone}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col md={6}>
+                      <Form.Group controlId="address">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>Address</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="address"
+                          value={values.address}
+                          onChange={handleChange}
+                          isInvalid={touched.address && !!errors.address}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.address}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                    <Col md={6}>
+                      <Form.Group controlId="city">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>City</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="city"
+                          value={values.city}
+                          onChange={handleChange}
+                          isInvalid={touched.city && !!errors.city}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.city}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col md={6}>
+                      <Form.Group controlId="region">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>Region</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="region"
+                          value={values.region}
+                          onChange={handleChange}
+                          isInvalid={touched.region && !!errors.region}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.region}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                    <Col md={6}>
+                      <Form.Group controlId="postalCode">
+                        <Form.Label className='fm-archivo-Medium fs-12 text-black'>Postal code</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="postalCode"
+                          value={values.postalCode}
+                          onChange={handleChange}
+                          isInvalid={touched.postalCode && !!errors.postalCode}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.postalCode}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Form.Group className='mt-3'>
+                    <Form.Label className='fm-archivo-semibold fs-14 text-black'>Select payment method</Form.Label>
+                    <Row>
+                      <Col md={6}>
+                        <PaymentOption
+                          icon={<i className="credit-card" />}
+                          label="Debit / Credit Card"
+                          selected={paymentMethod === 'card'}
+                          onClick={() => setPaymentMethod('card')}
+                        />
+                      </Col>
+                      <Col md={6}>
+                        <PaymentOption
+                          icon={<i className="fa-university" />}
+                          label="Virtual account"
+                          selected={paymentMethod === 'virtual'}
+                          onClick={() => setPaymentMethod('virtual')}
+                        />
+                      </Col>
+                    </Row>
                   </Form.Group>
 
-                  <Form.Group controlId="lastName">
-                    <Form.Label>Last name</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="lastName"
-                      value={values.lastName}
-                      onChange={handleChange}
-                      isInvalid={touched.lastName && !!errors.lastName}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.lastName}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="email">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control
-                      type="email"
-                      name="email"
-                      value={values.email}
-                      onChange={handleChange}
-                      isInvalid={touched.email && !!errors.email}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.email}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="phone">
-                    <Form.Label>Phone number</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="phone"
-                      value={values.phone}
-                      onChange={handleChange}
-                      isInvalid={touched.phone && !!errors.phone}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.phone}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="address">
-                    <Form.Label>Address</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="address"
-                      value={values.address}
-                      onChange={handleChange}
-                      isInvalid={touched.address && !!errors.address}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.address}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="city">
-                    <Form.Label>City</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="city"
-                      value={values.city}
-                      onChange={handleChange}
-                      isInvalid={touched.city && !!errors.city}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.city}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="region">
-                    <Form.Label>Region</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="region"
-                      value={values.region}
-                      onChange={handleChange}
-                      isInvalid={touched.region && !!errors.region}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.region}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="postalCode">
-                    <Form.Label>Postal code</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="postalCode"
-                      value={values.postalCode}
-                      onChange={handleChange}
-                      isInvalid={touched.postalCode && !!errors.postalCode}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.postalCode}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-
-                  <Form.Group controlId="cardNumber">
-                    <Form.Label>Card number</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="cardNumber"
-                      value={values.cardNumber}
-                      onChange={handleChange}
-                      isInvalid={touched.cardNumber && !!errors.cardNumber}
-                    />
+                  <Form.Group controlId="cardNumber" className='mt-3'>
+                    <InputGroup>
+                      <Form.Control
+                        type="text"
+                        name="cardNumber"
+                        placeholder='Card number'
+                        value={values.cardNumber}
+                        onChange={handleChange}
+                        isInvalid={touched.cardNumber && !!errors.cardNumber}
+                        className='border-end-0 card-num fm-archivo text-black'
+                      />
+                      <InputGroup.Text className={`bg-transparent border-start-0 border-light-gray rounded-end-pill card-text`}>
+                        <i className="fa-lock"></i>
+                      </InputGroup.Text>
+                    </InputGroup>
                     <Form.Control.Feedback type="invalid">
                       {errors.cardNumber}
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  <Form.Group controlId="expirationDate">
-                    <Form.Label>Expiration date (MM/YY)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="expirationDate"
-                      value={values.expirationDate}
-                      onChange={handleChange}
-                      isInvalid={touched.expirationDate && !!errors.expirationDate}
+                  <Row className='mt-3'>
+                    <Col md={6}>
+                      <Form.Group controlId="expirationDate">
+                        <Form.Control
+                          type="text"
+                          name="expirationDate"
+                          placeholder='Expiration date (MM/YY)'
+                          value={values.expirationDate}
+                          onChange={handleChange}
+                          isInvalid={touched.expirationDate && !!errors.expirationDate}
+                          className='fm-archivo'
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.expirationDate}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                    <Col md={6}>
+                      <Form.Group controlId="securityCode">
+                        <Form.Control
+                          type="text"
+                          name="securityCode"
+                          value={values.securityCode}
+                          onChange={handleChange}
+                          isInvalid={touched.securityCode && !!errors.securityCode}
+                          placeholder='securityCode'
+                          className='fm-archivo'
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          {errors.securityCode}
+                        </Form.Control.Feedback>
+                      </Form.Group>
+                    </Col>
+                  </Row>
+                  <Form.Group>
+                    <Form.Check
+                      type="checkbox"
+                      label="Use shipping address as billing address"
+                      className='fm-archivo-Medium fs-12 mt-2'
                     />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.expirationDate}
-                    </Form.Control.Feedback>
                   </Form.Group>
-
-                  <Form.Group controlId="securityCode">
-                    <Form.Label>securityCode</Form.Label>
-                    <Form.Control
-                      type="text"
-                      name="securityCode"
-                      value={values.securityCode}
-                      onChange={handleChange}
-                      isInvalid={touched.securityCode && !!errors.securityCode}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.securityCode}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+                  <Row className="mt-4">
+                    <Col className="d-flex justify-content-center">
+                      <Button
+                        variant="dark"
+                        type="submit"
+                        className="pay-button w-75 rounded-pill text-white"
+                      >
+                        Pay ${calculateTotal()} &rarr;
+                      </Button>
+                    </Col>
+                  </Row>
                 </Form>)}
             </Formik>
           </div>
