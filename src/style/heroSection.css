@@ -1,5 +1,5 @@
 .hero-section {
-    background-image: url('src/assets/hero.jpg');
+    background-image: url('/hero.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
