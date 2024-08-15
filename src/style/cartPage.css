@@ -17,7 +17,7 @@
 }
 
 .add-bouton {
-    background-image: url('/src/assets/icons/add.svg');
+    background-image: url('/icons/add.svg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 
 .decrement-bouton {
-    background-image: url('/src/assets/icons/decrement.svg');
+    background-image: url('/icons/decrement.svg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 }
 
 .trash-bouton {
-    background-image: url('/src/assets/icons/trash.svg');
+    background-image: url('/icons/trash.svg');
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
 }
 
 .trash-clear {
-    background-image: url('/src/assets/icons/trashClear.svg');
+    background-image: url('/icons/trashClear.svg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

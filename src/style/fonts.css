@@ -1,52 +1,52 @@
 @font-face {
     font-family: 'Chillax';
-    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Regular.otf') format('truetype');
+    src: url('../../public/fonts/chillax-cufonfonts/Chillax-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Chillax-Semibold';
-    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Semibold.otf') format('truetype');
+    src: url('../../public/fonts/chillax-cufonfonts/Chillax-Semibold.otf') format('truetype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Chillax-Medium';
-    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Medium.otf') format('truetype');
+    src: url('../../public/fonts/chillax-cufonfonts/Chillax-Medium.otf') format('truetype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Chillax-Bold';
-    src: url('../assets/fonts/chillax-cufonfonts/Chillax-Bold.otf') format('truetype');
+    src: url('../../public/fonts/chillax-cufonfonts/Chillax-Bold.otf') format('truetype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Archivo';
-    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-Regular.otf') format('truetype');
+    src: url('../../public/fonts/Archivo_Complete/Fonts/OTF/Archivo-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Archivo-Semibold';
-    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-SemiBold.otf') format('truetype');
+    src: url('../../public/fonts/Archivo_Complete/Fonts/OTF/Archivo-SemiBold.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Archivo-Medium';
-    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-Medium.otf') format('truetype');
+    src: url('../../public/fonts/Archivo_Complete/Fonts/OTF/Archivo-Medium.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Archivo-Bold';
-    src: url('../assets/fonts/Archivo_Complete/Fonts/OTF/Archivo-Bold.otf') format('truetype');
+    src: url('../../public/fonts/Archivo_Complete/Fonts/OTF/Archivo-Bold.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

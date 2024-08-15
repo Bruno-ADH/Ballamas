@@ -9,7 +9,7 @@
     position: relative;
     margin-bottom: 5rem !important;
   }
-/* netlify integration:deploy --build */
+
   .hero-section::after{
     content: "";
     position: absolute;
@@ -42,7 +42,7 @@
     display: inline-block;
     vertical-align: middle;
     line-height: 20px;
-    content: url("src/assets/icons/rectangle.svg");
+    content: url("/icons/rectangle.svg");
   }
 
   .hero-section .arrow {
@@ -68,7 +68,7 @@
 
   .hero-section .arrow span:nth-child(2){
     border-radius: 50%;
-    background-image:  url("src/assets/icons/arrow.svg");
+    background-image:  url("/icons/arrow.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

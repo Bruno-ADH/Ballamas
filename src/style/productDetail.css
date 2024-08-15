@@ -1,16 +1,16 @@
-h1 {
+.detail-page h1 {
     font-size: 2.625rem !important;
 }
 
-h4 {
+.detail-page h4 {
     font-size: 2.25rem;
 }
 
-.div-color-wrapper .color-title {
+.detail-page .div-color-wrapper .color-title {
     font-size: 1.875rem !important;
 }
 
-.div-color {
+.detail-page .div-color {
 
     span {
         width: 1.75rem;
@@ -21,13 +21,13 @@ h4 {
 
 }
 
-.size-div-wrapper{
+.detail-page .size-div-wrapper{
     span{
         font-size: 1.875rem !important;
     }
 }
 
-.size-div-wrapper .size-div button{
+.detail-page .size-div-wrapper .size-div button{
     padding-inline: .875rem;
     width: 4.6875rem;
     height: 3.25rem;
@@ -35,14 +35,14 @@ h4 {
     vertical-align: middle;
 }
 
-.buy-div {
+.detail-page .buy-div {
     button{
         padding: .75rem 1.25rem;
         font-size: .875rem !important;
     }
 }
 
-.description-div {
+.detail-page .description-div {
     h3{
         font-size: 1.875rem !important;
     }
@@ -52,7 +52,7 @@ h4 {
     }
 }
 
-.related-title {
+.detail-page .related-title {
     font-size: 1.875rem !important;
 }
 
@@ -76,27 +76,27 @@ h4 {
     transform: scale(1.4) !important;
 }
 
-.img-wrapper {
+.detail-page .img-wrapper {
     height: 37.5rem;
     overflow: hidden;
 }
 
-.img-wrapper .wrapper-direct {
+.detail-page .img-wrapper .wrapper-direct {
     
 }
 
-.img-wrapper .wrapper-direct img{
+.detail-page .img-wrapper .wrapper-direct img{
     object-fit: cover;
 }
 
 @media only screen and (max-width: 767px) {
-    .img-wrapper {
+    .detail-page .img-wrapper {
         height: 37.5rem;
         aspect-ratio: 1/1;
         overflow: hidden;
     }
     
-    .div-caroussel {
+    .detail-page .div-caroussel {
         overflow-x: auto !important
     }
   }

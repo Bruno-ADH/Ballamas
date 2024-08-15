@@ -32,7 +32,7 @@ const FeaturedCollection = () => {
             <div className="collection-item rounded-5 backdrop">
               <motion.img
                 loading='lazy'
-                src="src/assets/tech.jpg"
+                src="/tech.jpg"
                 alt="Modern Style"
                 className="img-fluid"
                 whileHover={{ scale: 1.05 }}
@@ -48,7 +48,7 @@ const FeaturedCollection = () => {
           <Col md={6} lg={8} className='px-md-1 mt-4 mt-lg-0'>
             <div className="collection-item rounded-5">
               <Parallax
-                bgImage="src/assets/abraham.jpg"
+                bgImage="/abraham.jpg"
                 strength={300}
                 bgImageAlt="Classic Men"
                 className="img-fluid classic bg-black"

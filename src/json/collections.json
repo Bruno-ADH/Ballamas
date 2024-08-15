@@ -3,7 +3,7 @@
         "id": 1,
       "title": "Leather Watch",
       "description": "Elegant watch with genuine leather strap.",
-      "image": "src/assets/accessories/watch/watch(1).png",
+      "image": "accessories/watch/watch(1).png",
       "price": 50,
       "promo": false,
       "discount": 0,
@@ -13,7 +13,7 @@
     {
         "id": 2,
       "title": "Joggers",
-      "image": "src/assets/unisex/pants/pants(1).png",
+      "image": "unisex/pants/pants(1).png",
       "price": 35,
       "promo": false,
       "discount": 0,
@@ -23,7 +23,7 @@
     {
         "id": 3,
         "title": "Jeans",
-        "image": "src/assets/unisex/pants/pants(3).png",
+        "image": "unisex/pants/pants(3).png",
         "price": 50,
         "promo": false,
         "discount": 0,
@@ -33,7 +33,7 @@
     {
         "id": 4,
       "title": "Boots",
-      "image": "src/assets/featured/shoes/shoes(1).png",
+      "image": "featured/shoes/shoes(1).png",
       "price": 90,
       "promo": false,
       "discount": 0,
@@ -43,7 +43,7 @@
     {
         "id": 5,
         "title": "Sneakers",
-        "image": "src/assets/featured/shoes/shoes(3).png",
+        "image": "featured/shoes/shoes(3).png",
         "price": 70,
         "promo": true,
         "discount": 20,
@@ -53,7 +53,7 @@
     {
         "id": 6,
       "title": "Formal Shoes",
-      "image": "src/assets/featured/shoes/shoes(2).png",
+      "image": "featured/shoes/shoes(2).png",
       "price": 80,
       "promo": false,
       "discount": 0,
@@ -63,7 +63,7 @@
     {
         "id": 7,
       "title": "Luxury Watch",
-      "image": "src/assets/accessories/watch/watch(2).png",
+      "image": "accessories/watch/watch(2).png",
       "price": 500,
       "promo": false,
       "discount": 0,
@@ -73,7 +73,7 @@
     {
         "id": 8,
         "title": "Cargo Pants",
-        "image": "src/assets/unisex/pants/pants(2).png",
+        "image": "unisex/pants/pants(2).png",
         "price": 40,
         "promo": true,
         "discount": 20,
@@ -83,7 +83,7 @@
     {
         "id": 9,
       "title": "Digital Watch",
-      "image": "src/assets/accessories/watch/watch(5).png",
+      "image": "accessories/watch/watch(5).png",
       "price": 45,
       "promo": false,
       "discount": 0,
@@ -93,7 +93,7 @@
     {
         "id": 10,
       "title": "Sports Watch",
-      "image": "src/assets/accessories/watch/watch(4).png",
+      "image": "accessories/watch/watch(4).png",
       "price": 70,
       "promo": false,
       "discount": 0,
@@ -103,7 +103,7 @@
     {
         "id": 11,
         "title": "Chinos",
-        "image": "src/assets/unisex/pants/pants(4).png",
+        "image": "unisex/pants/pants(4).png",
         "price": 45,
         "promo": false,
         "discount": 0,
@@ -113,7 +113,7 @@
     {
         "id": 12,
       "title": "Smartwatch",
-      "image": "src/assets/accessories/watch/watch(3).png",
+      "image": "accessories/watch/watch(3).png",
       "price": 150,
       "promo": false,
       "discount": 0,
@@ -123,7 +123,7 @@
     {
         "id": 13,
       "title": "Running Shoes",
-      "image": "src/assets/featured/shoes/shoes(4).png",
+      "image": "featured/shoes/shoes(4).png",
       "price": 60,
       "promo": false,
       "discount": 0,
@@ -133,7 +133,7 @@
     {
         "id": 14,
       "title": "Casual Shoes",
-      "image": "src/assets/featured/shoes/shoes(5).png",
+      "image": "featured/shoes/shoes(5).png",
       "price": 50,
       "promo": true,
       "discount": 15,
@@ -143,7 +143,7 @@
     {
         "id": 15,
       "title": "Dress Pants",
-      "image": "src/assets/unisex/pants/pants(5).png",
+      "image": "unisex/pants/pants(5).png",
       "price": 60,
       "promo": false,
       "discount": 0,

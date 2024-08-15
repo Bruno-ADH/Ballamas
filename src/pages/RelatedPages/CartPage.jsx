@@ -35,7 +35,7 @@ const CartPage = () => {
           <Row className='d-flex flex-row align-items-center justify-content-between mb-4'>
             <h2 className='fm-Chillax-Semibold w-auto fs-4 text-black'>Cart({cartItems.length})</h2>
             <Button onClick={handleClearCart} className="w-auto fm-archivo-Medium text-dark-gray bg-light-gray border-0 rounded-pill">
-              <img src="/src/assets/icons/trashClear.svg" alt="" /> Clear Cart
+              <img src="/icons/trashClear.svg" alt="" /> Clear Cart
             </Button>
           </Row>
           <Row className='fm-archivo-Medium text-dark-gray'>

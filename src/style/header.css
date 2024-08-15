@@ -4,20 +4,20 @@
 }
 
 .collapsed .navbar-toggler-icon {
-  --bs-navbar-toggler-icon-bg: url("src/assets/icons/burger-icon.svg");
+  --bs-navbar-toggler-icon-bg: url("/icons/burger-icon.svg");
   background-size: contain;
   background-position: center;
 }
 
 .navbar-toggler-icon {
-  --bs-navbar-toggler-icon-bg: url("src/assets/icons/burgerClose-icon.svg");
+  --bs-navbar-toggler-icon-bg: url("/icons/burgerClose-icon.svg");
   background-size: contain;
   background-position: center;
   transition: background-image .10s ease-in-out;
 }
 
 .cart span:nth-child(1):after{
-  content: url("src/assets/icons/cart.svg");
+  content: url("/icons/cart.svg");
   background-size: cover;
   object-fit: cover;
 }
@@ -28,13 +28,13 @@
 }
 
 .search span::after{
-  content: url("src/assets/icons/search.svg");
+  content: url("/icons/search.svg");
   background-size: cover;
   object-fit: cover;
 }
 
 .account span{
-  content: url("src/assets/icons/account.svg");
+  content: url("/icons/account.svg");
   background-size: cover;
   object-fit: cover;
   margin-bottom: -.1rem;

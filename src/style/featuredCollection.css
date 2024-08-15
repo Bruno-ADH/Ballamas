@@ -40,7 +40,7 @@
   z-index: 100;
 
   span {
-    background-image: url("src/assets/icons/arrow.svg");
+    background-image: url("/icons/arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;

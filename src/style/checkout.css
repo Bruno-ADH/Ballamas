@@ -108,17 +108,17 @@
 }
 
 .fa-university {
-  content: url('/src/assets/icons/bank.svg');
+  content: url('/icons/bank.svg');
   padding: 0px !important;
 }
 
 .credit-card {
-  content: url('/src/assets/icons/creditCard.svg');
+  content: url('/icons/creditCard.svg');
   padding: 0px !important;
 }
 
 .fa-lock::before {
-  content: url('/src/assets/icons/locked.svg');
+  content: url('/icons/locked.svg');
   padding: 0px !important;
   position: relative;
   top: .2rem;

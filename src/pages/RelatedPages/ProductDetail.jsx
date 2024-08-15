@@ -41,7 +41,7 @@ const ProductDetail = () => {
 
   
   return (
-    <Container className='mt-5 px-3 '>
+    <Container className='mt-5 px-3 detail-page'>
       <Row className="my-5 pt-4">
         <Col md={6} className='text-center'>
           <AnimatePresence>
