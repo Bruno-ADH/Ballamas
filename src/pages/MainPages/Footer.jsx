@@ -18,7 +18,7 @@ const Footer = () => {
               <Form.Control
                 type="email"
                 placeholder="Your email"
-                className="bg-transparent text-white rounded-5 border-white"
+                className="bg-transparent text-white rounded-5 border-white footer-input"
               />
               <motion.div
                 className='h-auto m-0 '
@@ -38,7 +38,7 @@ const Footer = () => {
           <Col md={12} lg={6} className="px-0">
             <Row className="mt-4 mt-lg-0 justify-content-center justify-content-md-start  justify-content-lg-end gap-4">
               <Col xs={3} lg={2} className="mb-3">
-                <h6 className="fm-archivo-Medium">Product</h6>
+                <h6 className="fm-archivo-Medium footer-title">Product</h6>
                 <ul className="list-unstyled">
                   <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link' >Jacket</motion.li></Link>
                   <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>T-Shirt</motion.li></Link>
@@ -47,7 +47,7 @@ const Footer = () => {
                 </ul>
               </Col>
               <Col xs={3} lg={2} className="mb-3">
-                <h6 className="fm-archivo-Medium">Categories</h6>
+                <h6 className="fm-archivo-Medium footer-title">Categories</h6>
                 <ul className="list-unstyled">
                   <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Man</motion.li></Link>
                   <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Woman</motion.li></Link>
@@ -57,7 +57,7 @@ const Footer = () => {
                 </ul>
               </Col>
               <Col xs={3} lg={3} className="mb-3 px-0 ps-1">
-                <h6 className="fm-archivo-Medium">Our Social Media</h6>
+                <h6 className="fm-archivo-Medium footer-title">Our Social Media</h6>
                 <ul className="list-unstyled">
                   <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Instagram</motion.li></Link>
                   <Link to="/"><motion.li whileHover={{ scale: 1.02 }} className='text-gray footer-link'>Facebook</motion.li></Link>

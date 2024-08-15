@@ -41,7 +41,7 @@ const CartPage = () => {
           <Row className='fm-archivo-Medium text-dark-gray'>
             <Col xs={6} sm={6} md={6} ><span>Product</span></Col>
             <Col xs={6} sm={6} md={6} className='d-flex flex-nowrap text-center ps-lg-5 gap-3'>
-              <span className='w-auto ms-lg-5'>Quantity</span> <span className='ms-auto w-auto me-3'>Price</span>
+              <span className='w-auto ms-lg-5'>Quantity</span> <span className='ms-auto w-auto'>Price</span>
             </Col>
           </Row>
           {cartItems.length === 0 && (
@@ -52,10 +52,10 @@ const CartPage = () => {
           {cartItems.length > 0 &&
             cartItems.map(item => (
               <Row key={item.id} className="border-0 border-top border-light-gray align-items-center mb-3 pt-3">
-                <Col xs={2} md={2} className=''>
+                <Col xs={2} md={2} className='p-0'>
                   <img src={`/${item.image}`} alt={item.title} className='img-fluid product-img rounded-2' />
                 </Col>
-                <Col xs={3} md={4} className='ps-0'>
+                <Col xs={3} md={4} className='ps-0 p-0'>
                   <h5 className='fm-archivo-semibold text-black product-title my-0 text-capitalize'>{item.title}</h5>
                   <p className='fm-archivo-Medium product-size text-dark-gray my-0 text-capitalize'>{item.color} - {item.size}</p>
                   <p className='fm-archivo-semibold text-black product-price my-0 text-capitalize'>${item.price}</p>
@@ -63,15 +63,15 @@ const CartPage = () => {
                 <Col xs={3} md={3} className="ms-lg-auto d-flex align-items-center gap-0 gap-lg-2 p-0">
                   <div className='d-flex align-items-center bg-light-gray rounded-pill p-1 px-2'>
                     <Button className='bg-transparent p-0 border-0 decrement-bouton' onClick={() => handleDecrement(item.id)}></Button>
-                    <Form.Control value={item.quantity} readOnly className="text-center mx-2 bg-transparent border-0" style={{ width: '50px' }} />
-                    <Button className='bg-transparent p-0 border-0 add-bouton' onClick={() => handleIncrement(item.id)}></Button>
+                    <Form.Control value={item.quantity} readOnly className="text-center mx-0 mx-md-2 bg-transparent border-0" style={{ width: '40px' }} />
+                    <Button className='bg-transparent border p-0 border-0 add-bouton' onClick={() => handleIncrement(item.id)}></Button>
                   </div>
                   <div className='d-flex justify-content-center align-items-center trash-wrapper'>
                     <Button onClick={() => handleRemoveItem(item.id)} className="bg-transparent border-0 trash-bouton text-black">
                     </Button>
                   </div>
                 </Col>
-                <Col xs={3} md={3} className='ms-auto w-auto'>
+                <Col xs={3} md={3} className='ms-auto w-auto text-wrap p-0'>
                   <h5 className='mb-0 fm-archivo-semibold total-price'>${item.price * item.quantity}.00</h5>
                 </Col>
               </Row>

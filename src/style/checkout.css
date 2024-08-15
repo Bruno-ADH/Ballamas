@@ -34,7 +34,7 @@
   width: 76px !important;
 }
 
-input[type="text"], input[type="email"] {
+.checkout-container input[type="text"], .checkout-mail {
   height: 2.75rem;
   padding-inline: .75rem;
   border: .8px solid var(--light-gray);
@@ -45,26 +45,32 @@ input[type="text"], input[type="email"] {
   border-radius: var(--bs-border-radius-pill);
 }
 
-input::placeholder {
+
+.checkout-container input::placeholder {
   font-size: .75rem;
-  color: var(--black) !important;
   font-family: 'fm-archivo', sans-serif;
 }
 
-input:focus, input:focus-visible {
+.checkout-container input:not(.is-invalid):focus, .checkout-container input:not(.is-invalid):focus-visible {
   border: 1px solid var(--black) !important;
 }
 
-.form-check-input:checked[type=radio] {
+.checkout-container .form-check-input:checked[type=radio] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%231d1d1d'/%3e%3c/svg%3e");
   background-color: transparent !important;
   border-color: var(--black) !important;
+  box-shadow: none !important;
 }
 
-.form-check-input:checked[type=checkbox] {
+.checkout-container .form-check-input:checked[type=checkbox] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%231d1d1d' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
   background-color: transparent !important;
   border-color: var(--black) !important;
+  box-shadow: none !important;
+}
+
+.checkout-container .form-check-input .was-validated .card-num:invalid{
+  border-color: var(--bs-form-invalid-border-color) !important;
 }
 
 .shipping-options {
@@ -132,6 +138,8 @@ input:focus, input:focus-visible {
   ~.card-text {
     border-color: var(--bs-form-invalid-border-color) !important;
     transition: none !important;
+    border-width: .1px;
+
   }
 }
 
@@ -146,4 +154,8 @@ input:focus, input:focus-visible {
 
 .inValid {
   border-color: #dc3545;
+}
+
+.checkout-container .is-invalid {
+  border-color: var(--bs-form-invalid-border-color) !important;
 }

@@ -7,16 +7,16 @@ footer {
     margin-bottom: 20px;
 }
 
-::placeholder{
+.footer-input::placeholder{
   font-size: .75rem;
-  color: rgb(255, 255, 255, .8) !important;
+  color: rgb(255, 255, 255, .8);
 }
 
 button{
   font-size: .875rem !important;
 }
 
-h6{
+.footer-title{
   color: #ffffff !important;
   font-size: 1rem !important;
   margin-bottom: 1rem;
@@ -31,7 +31,7 @@ li{
   line-height: 1.75;
 }
 
-input:focus, input:focus-visible{
+footer input:focus, footer input:focus-visible{
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
 }
 

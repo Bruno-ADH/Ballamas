@@ -79,11 +79,24 @@ h4 {
 .img-wrapper {
     height: 37.5rem;
     overflow: hidden;
-    background-image: url("src\assets\10a4be064a4d798b22f382964841053a.jpg");
 }
 
-.img-wrapper img{
-    height: 100%;
-    width: 100%;
+.img-wrapper .wrapper-direct {
+    
+}
+
+.img-wrapper .wrapper-direct img{
     object-fit: cover;
 }
+
+@media only screen and (max-width: 767px) {
+    .img-wrapper {
+        height: 37.5rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+    
+    .div-caroussel {
+        overflow-x: auto !important
+    }
+  }

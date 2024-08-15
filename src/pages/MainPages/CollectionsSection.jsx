@@ -47,16 +47,16 @@ const CollectionsSection = () => {
   return (
     <FadeInSection
       id="collections"
-      className="my-5">
+      className="mt-2 mb-5 mt-md-5">
       <Container className='px-lg-5'>
         <Row className="justify-content-center align-items-center">
           <Col md="auto justify-content-center align-items-center">
-            <p className="text-center fm-Chillax-Semibold title lh-sm">Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our stylish summer shirts.</p>
+            <p className="fs-4 text-center fm-Chillax-Semibold title lh-sm">Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our stylish summer shirts.</p>
           </Col>
         </Row>
-        <Row className="justify-content-center mt-5 mb-4">
+        <Row className="justify-content-center mt-3 mt-md-5 mb-3 mb-md-4">
           {categories.map(category => (
-            <Col key={category.name} md="auto" className="mb-2 rounded-5" >
+            <Col key={category.name} md="auto" className="mb-2 rounded-5 w-auto" >
               <Button
                 variant={selectedCategory === category.name ? 'dark bg-black text-white' : 'outline-dark  border-black text-black hover-dark'}
                 className="fs-5 fm-archivo-Medium rounded-pill selectedBtn"
@@ -73,7 +73,7 @@ const CollectionsSection = () => {
         <Row className="px-lg-3 pt-3 gutter">
           <AnimatePresence mode='popLayout'>
             {visibleCollections.map(collection => (
-              <Col key={collection.id} lg={4} md={6} xs={12} className="mb-0">
+              <Col key={collection.id} lg={4} md={6} className="mb-0 px-0">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -107,14 +107,10 @@ const CollectionsSection = () => {
                       </div>
                     </div>
                     <Card.Body className="p-0 mt-3">
-                      {/* <Row className='w-100 m-0 justify-content-between align-items-center my-3'> */}
                       <Card.Title className="fs-3 fm-archivo-semibold m-0 mb-1 text-black text-uppercase"
                         onClick={() => handleProductClick(collection.id)}
                       >{collection.title}</Card.Title>
-                      {/* <img loading="lazy" src="src/assets/icons/ethereum-ellipse.svg" className="img-fluid m-0 p-0 ms-auto" alt="Logo" style={{ width: '24px', height: '24px' }} /> */}
                       <Card.Text className='fm-archivo-semibold fs-4 p-0 text-dark-gray'>${collection.price}</Card.Text>
-                      {/* </Row> */}
-                      {/* <Button variant="outline-dark border-neutral-800 rounded-3 w-100 fw-semibold">Place a Bid</Button> */}
                     </Card.Body>
                   </Card>
                 </motion.div>
@@ -122,7 +118,7 @@ const CollectionsSection = () => {
             ))}
           </AnimatePresence>
         </Row>
-        <Row className="text-center">
+        <Row className="text-center mt-3">
           <Col>
             <Button variant="light" className="text-black bg-transparent rounded-pill hover-dark fw-bold text-center border-black fm-archivo-semibold pd-more"
               onClick={() => setShowAll(!showAll)}

@@ -1,11 +1,8 @@
     .collection-card {
-      /* padding: 12px; */
       border-radius: 1.5rem;
     }
 
     .title {
-      font-size: 1.875rem;
-      /* line-height: 1.25; */
     }
 
     .selectedBtn {
@@ -115,4 +112,11 @@
       height: 100%;
       object-fit: cover;
       border-radius: inherit;
+    }
+
+    @media only screen and (min-width >= 768px) {
+      .title {
+        font-size: 1.875rem;
+      }
+  
     }

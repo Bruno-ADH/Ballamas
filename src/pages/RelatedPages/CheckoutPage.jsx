@@ -46,7 +46,7 @@ const CheckoutPage = () => {
   });
 
   return (
-    <Container className="my-5">
+    <Container className="my-5 checkout-container">
       <Row>
         <Col md={6}>
           <h2 className="fm-Chillax-Semibold text-black fs-4">Checkout</h2>
@@ -117,6 +117,7 @@ const CheckoutPage = () => {
                   value="free"
                   checked={shippingMethod === 'free'}
                   onChange={handleShippingChange}
+                  className='shipping-radio'
                 />
                 <div className="option-details">
                   <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Free shipping</p>
@@ -132,6 +133,7 @@ const CheckoutPage = () => {
                   value="regular"
                   checked={shippingMethod === 'regular'}
                   onChange={handleShippingChange}
+                  className='shipping-radio'
                 />
                 <div className="option-details">
                   <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Regular shipping</p>
@@ -147,6 +149,7 @@ const CheckoutPage = () => {
                   value="express"
                   checked={shippingMethod === 'express'}
                   onChange={handleShippingChange}
+                  className='shipping-radio'
                 />
                 <div className="option-details">
                   <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Express shipping</p>
@@ -202,7 +205,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.firstName && !!errors.firstName}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.firstName}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -218,7 +221,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.lastName && !!errors.lastName}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.lastName}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -231,13 +234,14 @@ const CheckoutPage = () => {
                         <Form.Label className='fm-archivo-Medium fs-12 text-black'>Email address</Form.Label>
                         <Form.Control
                           type="email"
+                          className='checkout-mail'
                           name="email"
                           placeholder='Enter your email address'
                           value={values.email}
                           onChange={handleChange}
                           isInvalid={touched.email && !!errors.email}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.email}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -253,7 +257,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.phone && !!errors.phone}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.phone}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -272,7 +276,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.address && !!errors.address}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.address}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -288,7 +292,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.city && !!errors.city}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.city}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -307,7 +311,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.region && !!errors.region}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.region}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -323,7 +327,7 @@ const CheckoutPage = () => {
                           onChange={handleChange}
                           isInvalid={touched.postalCode && !!errors.postalCode}
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.postalCode}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -341,7 +345,7 @@ const CheckoutPage = () => {
                           onClick={() => setPaymentMethod('card')}
                         />
                       </Col>
-                      <Col md={6}>
+                      <Col md={6} className='mt-3 mt-md-0'>
                         <PaymentOption
                           icon={<i className="fa-university" />}
                           label="Virtual account"
@@ -367,12 +371,12 @@ const CheckoutPage = () => {
                         <i className="fa-lock"></i>
                       </InputGroup.Text>
                     </InputGroup>
-                    <Form.Control.Feedback type="invalid">
+                    <Form.Control.Feedback type="invalid" className="fm-archivo">
                       {errors.cardNumber}
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  <Row className='mt-3'>
+                  <Row className='mt-3 g-2'>
                     <Col md={6}>
                       <Form.Group controlId="expirationDate">
                         <Form.Control
@@ -384,7 +388,7 @@ const CheckoutPage = () => {
                           isInvalid={touched.expirationDate && !!errors.expirationDate}
                           className='fm-archivo'
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.expirationDate}
                         </Form.Control.Feedback>
                       </Form.Group>
@@ -400,7 +404,7 @@ const CheckoutPage = () => {
                           placeholder='securityCode'
                           className='fm-archivo'
                         />
-                        <Form.Control.Feedback type="invalid">
+                        <Form.Control.Feedback type="invalid" className="fm-archivo">
                           {errors.securityCode}
                         </Form.Control.Feedback>
                       </Form.Group>

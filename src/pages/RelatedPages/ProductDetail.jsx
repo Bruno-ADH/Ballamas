@@ -39,13 +39,13 @@ const ProductDetail = () => {
     navigate(`/cart`);
   };
 
-
+  
   return (
-    <Container className='mt-5 px-3'>
+    <Container className='mt-5 px-3 '>
       <Row className="my-5 pt-4">
-        <Col md={6} className=''>
+        <Col md={6} className='text-center'>
           <AnimatePresence>
-            <div className='bg-light-gray rounded-5 img-wrapper'>
+            <div className=' bg-light-gray rounded-5 img-wrapper h-100 text-center'>
 
               <motion.div
                 key={selectedColor + selectedSize}
@@ -53,12 +53,13 @@ const ProductDetail = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: '-100%' }}
                 transition={{ type: "spring" }}
+                className=' h-100 d-flex justify-content-center pb-5 pt-0 pt-md-3 pb-md-0 d-md-block'
               >
                 <img
                   loading='lazy'
                   src={`/${product.image}`}
                   alt={product.title}
-                  className={`img-fluid w-100 h-100 ${variantsColor[selectedColor]} ${variantsSize[selectedSize]}`}
+                  className={`img-fluid ${variantsColor[selectedColor]} ${variantsSize[selectedSize]}`}
                 />
               </motion.div>
 
@@ -138,7 +139,7 @@ const ProductDetail = () => {
       </Row>
 
       <h4 className='fm-Chillax-Semibold related-title'>You may also like</h4>
-      <Row className="my-4">
+      <Row className="my-4 overflow-x-hidden div-caroussel">
         <CustomCarousel collections={relatedProducts} />
       </Row>
     </Container>
