@@ -1,0 +1,102 @@
+.detail-page h1 {
+    font-size: 2.625rem !important;
+}
+
+.detail-page h4 {
+    font-size: 2.25rem;
+}
+
+.detail-page .div-color-wrapper .color-title {
+    font-size: 1.875rem !important;
+}
+
+.detail-page .div-color {
+
+    span {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+}
+
+.detail-page .size-div-wrapper{
+    span{
+        font-size: 1.875rem !important;
+    }
+}
+
+.detail-page .size-div-wrapper .size-div button{
+    padding-inline: .875rem;
+    width: 4.6875rem;
+    height: 3.25rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.detail-page .buy-div {
+    button{
+        padding: .75rem 1.25rem;
+        font-size: .875rem !important;
+    }
+}
+
+.detail-page .description-div {
+    h3{
+        font-size: 1.875rem !important;
+    }
+
+    p{
+        font-size: 1.125rem !important;
+    }
+}
+
+.detail-page .related-title {
+    font-size: 1.875rem !important;
+}
+
+.scale-xs{
+    transform: scale(0.6) !important;
+}
+
+.scale-s{
+    transform: scale(0.8) !important;
+}
+
+.scale-m{
+    transform: scale(1) !important;
+}
+
+.scale-l{
+    transform: scale(1.2) !important;
+}
+
+.scale-xl{
+    transform: scale(1.4) !important;
+}
+
+.detail-page .img-wrapper {
+    height: 37.5rem;
+    overflow: hidden;
+}
+
+.detail-page .img-wrapper .wrapper-direct {
+    
+}
+
+.detail-page .img-wrapper .wrapper-direct img{
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .detail-page .img-wrapper {
+        height: 37.5rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+    
+    .detail-page .div-caroussel {
+        overflow-x: auto !important
+    }
+  }

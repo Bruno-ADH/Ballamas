@@ -1,0 +1,118 @@
+.hidden {
+  border-bottom-width: 0px !important;
+  transition: border-bottom-width .10s ease-in-out;
+}
+
+.collapsed .navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("/icons/burger-icon.svg");
+  background-size: contain;
+  background-position: center;
+}
+
+.navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("/icons/burgerClose-icon.svg");
+  background-size: contain;
+  background-position: center;
+  transition: background-image .10s ease-in-out;
+}
+
+.cart span:nth-child(1):after{
+  content: url("/icons/cart.svg");
+  background-size: cover;
+  object-fit: cover;
+}
+
+.cart sup {
+  position: relative;
+  top: -1rem;
+}
+
+.search span::after{
+  content: url("/icons/search.svg");
+  background-size: cover;
+  object-fit: cover;
+}
+
+.account span{
+  content: url("/icons/account.svg");
+  background-size: cover;
+  object-fit: cover;
+  margin-bottom: -.1rem;
+  margin-right: .3rem;
+}
+
+.burger {
+  border: none;
+  box-shadow: none;
+  transform: scale(1);
+  transition: background-color .15s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+    transition: transform .15s ease-in;
+  }
+}
+
+.burger:focus,
+.burger:focus-visible {
+  box-shadow: none;
+}
+
+.ntf {
+  position: static;
+  transition: visibility .15s ease-in-out;
+}
+
+.lg-visible {
+  visibility: visible;
+  pointer-events: visible;
+}
+
+.hidden .show {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+}
+
+/*pc*/
+@media only screen and (min-width: 992px) {
+  .cart sup {
+    position: relative;
+    top: -.5rem;
+  }
+  .cart span:nth-child(1)::after{
+    content: 'Cart';
+    font-family: 'Archivo', sans-serif;
+    color: var(--black);
+  }  
+  .ntf {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lg-visible {
+    visibility: visible;
+    pointer-events: visible;
+  }
+  .hidden {
+    border-bottom-width: 1px !important;
+    transition: border-bottom-width .10s ease-in-out;
+  }
+  .hidden .show {
+    border-top-width: 0px !important;
+  }
+}
+
+/*tablette*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .lg-visible {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/*smartphone*/
+@media only screen and (max-width: 767px) {
+  .lg-visible {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
