@@ -52,7 +52,8 @@
 }
 
 .checkout-container input:not(.is-invalid):focus, .checkout-container input:not(.is-invalid):focus-visible {
-  border: 1px solid var(--black) !important;
+  border: 1px solid var(--black);
+  box-shadow: none;
 }
 
 .checkout-container .form-check-input:checked[type=radio] {
@@ -125,22 +126,18 @@
 }
 
 .card-num:focus, .card-num:focus-visible {
-  border-right-width: 0px !important;
-  transition: none !important;
-
-  ~.card-text {
-    border-color: var(--black) !important;
-    transition: none !important;
-  }
+  border-right: none;
 }
 
-.card-num.is-invalid, .was-validated .card-num:invalid {
-  ~.card-text {
-    border-color: var(--bs-form-invalid-border-color) !important;
-    transition: none !important;
-    border-width: .1px;
+.card-num:focus ~.card-text, .card-num:focus-visible ~.card-text {
+  border-color: var(--black) !important;
+  transition: none !important;
+}
 
-  }
+.card-num.is-invalid ~.card-text, .was-validated .card-num:invalid  ~.card-text {
+  border-color: var(--bs-form-invalid-border-color) !important;
+  transition: none !important;
+  border-width: .1px;
 }
 
 .pay-button {

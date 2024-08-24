@@ -10,21 +10,15 @@
     font-size: 1.875rem !important;
 }
 
-.detail-page .div-color {
-
-    span {
-        width: 1.75rem;
-        height: 1.75rem;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
+.detail-page .div-color span {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.detail-page .size-div-wrapper{
-    span{
-        font-size: 1.875rem !important;
-    }
+.detail-page .size-div-wrapper span{
+    font-size: 1.875rem !important;
 }
 
 .detail-page .size-div-wrapper .size-div button{
@@ -35,11 +29,9 @@
     vertical-align: middle;
 }
 
-.detail-page .buy-div {
-    button{
-        padding: .75rem 1.25rem;
-        font-size: .875rem !important;
-    }
+.detail-page .buy-div button{
+    padding: .75rem 1.25rem;
+    font-size: .875rem !important;
 }
 
 .detail-page .description-div {

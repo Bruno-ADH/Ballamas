@@ -121,10 +121,10 @@
     }
 
     @media only screen and (max-width: 767px) {
-      .collection-card {
+     .collection-section .collection-card {
         width: auto;
-          .wrapper {
-            width: auto;
-          }
+      }
+      .collection-section .collection-card .wrapper {
+        width: auto;
       }
     }

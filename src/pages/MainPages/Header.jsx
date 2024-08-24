@@ -7,6 +7,7 @@ import useCartStore from '../../data/useCartStore';
 
 const Header = () => {
   const [state, toggle] = useToggle(false)
+  const userAgent = navigator.userAgent.toLowerCase();
 
   const cartItems = useCartStore.use.cartItems();
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -23,7 +24,7 @@ const Header = () => {
   }
 
   return (
-    <Navbar variant="border-0 border-bottom py-3 border-light-gray fm-archivo fw-normal navbar-wrapper container" bg="white" expand="lg" sticky='top' expanded={state}
+    <Navbar variant={`border-0 border-bottom py-3 ${userAgent?.includes('iphone') ? 'px-4' : 'px-0'} border-light-gray fm-archivo fw-normal navbar-wrapper container`} bg="white" expand="lg" sticky='top' expanded={state}
     >
       <Navbar.Toggle
         aria-controls="modern-navbar-nav"

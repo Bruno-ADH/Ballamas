@@ -123,7 +123,7 @@ const CheckoutPage = () => {
                   <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Free shipping</p>
                   <p className="shipping-details fm-archivo-Medium text-dark-gray fs-12">7-30 business days</p>
                 </div>
-                <span className="shipping-cost fm-archivo-Medium text-black fs-14">$0</span>
+                <span className="shipping-cost fm-archivo-Medium text-black fs-14 ms-auto">$0</span>
               </div>
 
               <div className={`shipping-option ${shippingMethod === 'regular' ? 'checked' : ''}`}>
@@ -139,7 +139,7 @@ const CheckoutPage = () => {
                   <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Regular shipping</p>
                   <p className="shipping-details fm-archivo-Medium text-dark-gray fs-12">3-14 business days</p>
                 </div>
-                <span className="shipping-cost fm-archivo-Medium text-black fs-14">$7.50</span>
+                <span className="shipping-cost fm-archivo-Medium text-black fs-14 ms-auto">$7.50</span>
               </div>
 
               <div className={`shipping-option ${shippingMethod === 'express' ? 'checked' : ''}`}>
@@ -155,7 +155,7 @@ const CheckoutPage = () => {
                   <p className="shipping-option-title fm-archivo-Medium text-black fs-14">Express shipping</p>
                   <p className="shipping-details fm-archivo-Medium text-dark-gray fs-12">1-3 business days</p>
                 </div>
-                <span className="shipping-cost fm-archivo-Medium text-black fs-14">$22.50</span>
+                <span className="shipping-cost fm-archivo-Medium text-black fs-14 ms-auto">$22.50</span>
               </div>
             </div>
           </Form.Group>

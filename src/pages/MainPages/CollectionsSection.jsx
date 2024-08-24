@@ -48,7 +48,7 @@ const CollectionsSection = () => {
     <FadeInSection
       id="collections"
       className="mt-2 mb-5 mt-md-5">
-      <Container className='px-lg-5'>
+      <Container className='px-lg-5 collection-section'>
         <Row className="justify-content-center align-items-center">
           <Col md="auto justify-content-center align-items-center">
             <p className="fs-4 text-center fm-Chillax-Semibold title lh-sm">Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our stylish summer shirts.</p>

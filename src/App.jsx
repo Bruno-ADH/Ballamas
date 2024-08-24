@@ -45,7 +45,7 @@ function PageError() {
   console.log('error :>> ', error);
 
   return <div className="d-flex justify-content-center align-items-center bg-light vh-100">
-    <div className="bounceAnime">
+    <div>
       <h3 className='h3 text-muted text-uppercase'>Une erreur est survenue</h3>
       <p>
         {error?.error?.toString() ?? error?.toString()}
@@ -55,12 +55,13 @@ function PageError() {
 }
 
 function Root() {
+  const userAgent = navigator.userAgent.toLowerCase();
   const { state } = useNavigation()
   console.log('state :>> ', state);
   return <div className=''>
     <Meta />
     <Header />
-    <div className="container">
+    <div className={`container ${userAgent?.includes('iphone') ? 'px-4' : 'px-0'}`}>
       {state === 'loading' && <div className="spinner-border text-olive border-olive" role="status">
         <span className="visually-hidden">Loading...</span>
       </div>
