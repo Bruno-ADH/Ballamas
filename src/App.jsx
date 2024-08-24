@@ -55,13 +55,12 @@ function PageError() {
 }
 
 function Root() {
-  const userAgent = navigator.userAgent.toLowerCase();
   const { state } = useNavigation()
   console.log('state :>> ', state);
   return <div className=''>
     <Meta />
     <Header />
-    <div className={`container ${userAgent?.includes('iphone') ? 'px-4' : 'px-0'}`}>
+    <div className={`container`}>
       {state === 'loading' && <div className="spinner-border text-olive border-olive" role="status">
         <span className="visually-hidden">Loading...</span>
       </div>
