@@ -12,7 +12,7 @@ function  Meta() {
         <link rel="apple-touch-icon" href="/android-chrome-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/android-chrome-512x512.png" sizes="512x512" />
         <meta property="og:title" content="BALLAMAS" />
-        <meta property="og:image" content={"https://ballamas.netlify.app/" + featuredImage} />
+        <meta property="og:image" content={"https://ballamas.netlify.app" + featuredImage} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="BALLAMAS" />
         <meta property="og:locale" content="fr_FR" />
