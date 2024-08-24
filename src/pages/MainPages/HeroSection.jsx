@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import '../../style/heroSection.css';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
+  useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const hero = document.querySelector('.hero-section')
+    if (userAgent && hero) {
+      if (userAgent.includes('iphone')) {
+        hero.style.backgroundAttachment = "scroll"
+      } else {
+        hero.style.backgroundAttachment = "fixed"
+      }
+    }
+  }, [])
 
   return (
     <section id="home" className="hero-section text-start p-0 pt-1 mt-5 rounded-5">

@@ -38,8 +38,9 @@ const FeaturedCollection = () => {
                 whileHover={{ scale: 1.05 }}
               />
               <Button variant="light"
+                as={motion.button}
                 className="learn-more-btn fm-archivo-semibold rounded-5"
-                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: .9 }}
               >
                 LEARN MORE <span></span>
               </Button>

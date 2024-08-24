@@ -43,6 +43,7 @@ const Header = () => {
               to="/"
               className='fw-normal'
               onClick={() => state ? burgerToggle() : null}
+              key={link}
             >
               {link}
             </Nav.Link>
@@ -83,7 +84,7 @@ const Header = () => {
           <span></span>
           <sup
             className='px-1 rounded-3 text-white text-black fm-archivo-semibold bg-gray d-lg-none'>{totalItems}</sup>
-          <a className='d-none d-lg-inline'>({totalItems})</a>
+          <span className='d-none d-lg-inline'>({totalItems})</span>
         </Button>
         <Button
           as={Link}

@@ -118,5 +118,13 @@
       .title {
         font-size: 1.875rem;
       }
-  
+    }
+
+    @media only screen and (max-width: 767px) {
+      .collection-card {
+        width: auto;
+          .wrapper {
+            width: auto;
+          }
+      }
     }
