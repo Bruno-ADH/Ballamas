@@ -12,17 +12,6 @@
   --filterOcean: invert(21%) sepia(6%) saturate(4658%) hue-rotate(141deg) brightness(96%) contrast(72%);
   --olive: #706947; 
   --filterOlive: invert(32%) sepia(2%) saturate(6621%) hue-rotate(13deg) brightness(121%) contrast(84%);
-
-  --neutral50: #E8E9EA;
-  --neutral100: #BBBABE;
-  --neutral200: #96989E;
-  --neutral300: #666A72;
-  --neutral400: #484D56;
-  --neutral500: #323842;
-  --neutral600: #181D28;
-  --neutral700: #12171F;
-  --neutral800: #0E1218;
-  --neutral900: #0B0D12;
 }
 
 *::selection,html::selection, body::selection{
