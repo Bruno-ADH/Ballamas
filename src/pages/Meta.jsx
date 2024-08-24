@@ -16,7 +16,7 @@ function  Meta() {
         <meta property="og:title" content="BALLAMAS" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ballamas.netlify.app/" />
-        <meta property="og:image" content="https://ballamas.netlify.app/metaProfil.jpg"/>
+        <meta property="og:image" content="https://ballamas.netlify.app/socialImg/headerProfil.jpg"/>
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:description" content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
