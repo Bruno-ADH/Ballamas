@@ -11,12 +11,13 @@ function  Meta() {
         <link rel="apple-touch-icon" href="/android-chrome-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/android-chrome-512x512.png" sizes="512x512" />
         <meta property="og:title" content="BALLAMAS" />
-        <meta property="og:image" content="/hero.jpg" />
-        <meta property="og:type" content="website" />
+        <meta property="og:image" content="hero.jpg" />
+        <meta property="og:type" content="article" />
         <meta property="og:site_name" content="BALLAMAS" />
         <meta property="og:locale" content="fr_FR" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        {/* <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" /> */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BALLAMAS</title>
         <meta name="description" content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
         <meta property="og:description" content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
