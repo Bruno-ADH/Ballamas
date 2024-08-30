@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-function  Meta() {
+function Meta() {
   return (
     <>
       <Helmet>
@@ -14,17 +14,18 @@ function  Meta() {
         <title>BALLAMAS</title>
 
         <meta property="og:title" content="BALLAMAS" />
-        <meta property="og:type" content="website" />
+        <meta property="og:description"
+          content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
+        <meta property="og:image" content="https://ballamas.netlify.app/socialImg/headerProfil.jpg" />
         <meta property="og:url" content="https://ballamas.netlify.app/" />
-        <meta property="og:image" content="https://ballamas.netlify.app/socialImg/headerProfil.jpg"/>
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:description" content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
-        <meta property="og:site_name" content="BALLAMAS" />
-        <meta property="og:locale" content="fr_FR" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="description" content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
+        <meta property="og:type" content="website" />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BALLAMAS" />
+        <meta name="twitter:description"
+          content="Discover Ballamas, your go-to online shop for quality products. Explore our wide selection and enjoy a seamless, fast, and secure shopping experience" />
+        <meta name="twitter:image" content="https://ballamas.netlify.app/socialImg/headerProfil.jpg" />
+        <meta name="twitter:url" content="https://ballamas.netlify.app/" />
       </Helmet>
     </>
   );
