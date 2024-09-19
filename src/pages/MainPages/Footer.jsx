@@ -70,7 +70,11 @@ const Footer = () => {
         </Row>
         <Row className="mt-4">
           <Col md={12} className="text-dark-gray text-center copyright">
-            &copy; BALLAMAS 2024 by waris
+            &copy; BALLAMAS 2024 by <a 
+            class="text-dark-gray "
+                    href="https://wa.me/22952694520">
+                    bruno
+                </a>❤
           </Col>
         </Row>
       </Container>

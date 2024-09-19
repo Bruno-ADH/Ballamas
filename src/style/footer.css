@@ -39,6 +39,11 @@ footer input:focus, footer input:focus-visible{
   font-size: .875rem !important;
 }
 
+.copyright a:hover {
+ text-decoration: underline wavy var(--dark-gray);
+ color: var(--dark-gray) !important;
+}
+
 .newsletter {
     font-size: .875rem;
 }
